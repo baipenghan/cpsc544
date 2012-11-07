@@ -19,21 +19,21 @@ public class Ideas {
 
 	private JFrame frame;
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					Ideas window = new Ideas();
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ideas window = new Ideas();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the application.
@@ -48,11 +48,12 @@ public class Ideas {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
-		frame.setBounds(100, 100, 735, 530);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100,  1024, 768);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblProposedSuggestions = new JLabel("Proposed Suggestions");
+		JLabel lblProposedSuggestions = new JLabel("Idea Competition");
+		lblProposedSuggestions.setHorizontalAlignment(SwingConstants.CENTER);
 		lblProposedSuggestions.setBounds(222, 10, 271, 30);
 		frame.getContentPane().add(lblProposedSuggestions);
 		lblProposedSuggestions.setFont(new Font("Helvetica", Font.PLAIN, 25));
@@ -147,14 +148,12 @@ public class Ideas {
 		frame.getContentPane().add(separator_2);
 		
 		final JLabel lblNewLabel_1 = new JLabel("Optimal Temperature for house heating");
+		lblNewLabel_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblNewLabel_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				Comment com = new Comment();
 				com.setVisible(true);
-			}
-			public void mouseEntered(MouseEvent e) {
-				lblNewLabel_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 16));
@@ -167,9 +166,6 @@ public class Ideas {
 			public void mouseClicked(MouseEvent e) {
 				Comment com = new Comment();
 				com.setVisible(true);
-			}
-			public void mouseEntered(MouseEvent e) {
-				txtpnIThinkThe.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
 		txtpnIThinkThe.setText("I think the optimal temperature for house heating is 23, because we can save a lot of energy in this way.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
@@ -187,16 +183,18 @@ public class Ideas {
 		frame.getContentPane().add(lblSuggestionForEnegy);
 		
 		final JLabel label_1 = new JLabel("");
+		label_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		label_1.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseReleased(MouseEvent e) {
+//				Profile pikachu = new Profile();
+//				pikachu.setVisible(true);
+//
+//			}
 			@Override
-			public void mouseReleased(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) {
 				Profile pikachu = new Profile();
 				pikachu.setVisible(true);
-
-			}
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				label_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
 		label_1.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Picachu.png")));
@@ -204,6 +202,14 @@ public class Ideas {
 		frame.getContentPane().add(label_1);
 		
 		JLabel lblPatrick = new JLabel("Patrick");
+		lblPatrick.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Profile pikachu = new Profile();
+				pikachu.setVisible(true);
+			}
+		});
+		lblPatrick.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPatrick.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
 		lblPatrick.setBounds(632, 97, 61, 16);
 		frame.getContentPane().add(lblPatrick);
@@ -232,7 +238,7 @@ public class Ideas {
 		btnNewest.setBounds(148, 47, 117, 29);
 		frame.getContentPane().add(btnNewest);
 		
-		JButton btnTopMonthly = new JButton("Top 5 Monthly");
+		JButton btnTopMonthly = new JButton("Top Monthly");
 		btnTopMonthly.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
@@ -253,7 +259,7 @@ public class Ideas {
 		btnTopMonthly.setBounds(305, 47, 117, 29);
 		frame.getContentPane().add(btnTopMonthly);
 		
-		JButton btnTopYearly = new JButton("Top 5 Yearly\n");
+		JButton btnTopYearly = new JButton("Top Yearly\r\n");
 		btnTopYearly.setBounds(470, 47, 117, 29);
 		frame.getContentPane().add(btnTopYearly);
 		

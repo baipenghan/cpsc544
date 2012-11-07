@@ -2,25 +2,18 @@ package ubc.cpsc544;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
+import javax.swing.JPanel;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
-import javax.swing.JTextField;
-import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import java.awt.FlowLayout;
 
 public class PrivateDashboard {
 
@@ -56,7 +49,7 @@ public class PrivateDashboard {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 1024, 768);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel_1 = new JPanel();

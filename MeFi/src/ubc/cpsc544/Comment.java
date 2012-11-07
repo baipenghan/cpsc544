@@ -44,8 +44,8 @@ public class Comment extends JFrame {
 	 * Create the frame.
 	 */
 	public Comment() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(150, 150, 736, 581);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setBounds(150, 150,  1024, 768);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -179,18 +179,6 @@ public class Comment extends JFrame {
 		});
 		btnSubmit.setBounds(358, 484, 88, 29);
 		contentPane.add(btnSubmit);
-		
-		final Comment cm = this;
-		
-		JButton btnNewButton = new JButton("Close");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				cm.setVisible(false);
-			}
-		});
-		btnNewButton.setBounds(638, 6, 72, 29);
-		contentPane.add(btnNewButton);
 		
 		JButton btnEdit = new JButton("Edit");
 		btnEdit.addMouseListener(new MouseAdapter() {

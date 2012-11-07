@@ -7,7 +7,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -40,9 +39,8 @@ public class Profile extends JFrame {
 	 * Create the frame.
 	 */
 	public Profile() {
-		final Profile p = this;
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 642, 436);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setBounds(100, 100, 1024, 768);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -89,15 +87,5 @@ public class Profile extends JFrame {
 		lblNewLabel_2.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		lblNewLabel_2.setBounds(198, 92, 341, 27);
 		contentPane.add(lblNewLabel_2);
-		
-		JButton btnClose = new JButton("Close");
-		btnClose.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				p.setVisible(false);
-			}
-		});
-		btnClose.setBounds(546, 11, 79, 29);
-		contentPane.add(btnClose);
 	}
 }

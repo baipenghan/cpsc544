@@ -1,7 +1,6 @@
 package ubc.cpsc544;
 
 import java.awt.Color;
-import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Insets;
@@ -12,15 +11,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
-import javax.swing.JTextPane;
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import java.awt.FlowLayout;
 
 public class PublicDashboard {
 
@@ -55,10 +49,6 @@ public class PublicDashboard {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-//		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-//		InputStream Picachu = classLoader.getResourceAsStream("/Picachu.gif");
-//		Image picachu= ImageIO.read(input);
-//	      LblLogo = new JLabel( new ImageIcon( logo ) );
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 1024, 768);
@@ -82,7 +72,6 @@ public class PublicDashboard {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				PrivateDashboard privateDashboard = new PrivateDashboard();
-				
 				privateDashboard.getFrame().setVisible(true);
 			}
 		});
@@ -91,7 +80,7 @@ public class PublicDashboard {
 		
 		JLabel lblForgotPassword = new JLabel("Forgot Password");
 		lblForgotPassword.setForeground(Color.BLUE);
-		lblForgotPassword.setBounds(911, 43, 86, 14);
+		lblForgotPassword.setBounds(895, 44, 102, 14);
 		frame.getContentPane().add(lblForgotPassword);
 		
 		JPanel panel_1 = new JPanel();
