@@ -2,18 +2,25 @@ package ubc.cpsc544;
 
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.JSeparator;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import java.awt.FlowLayout;
 
 public class PrivateDashboard {
 
@@ -172,6 +179,7 @@ public class PrivateDashboard {
 		panel_2.add(label_5);
 		
 		JLabel lblOverview = new JLabel("Overview");
+		lblOverview.setOpaque(true);
 		lblOverview.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblOverview.setBackground(Color.ORANGE);
 		lblOverview.setHorizontalAlignment(SwingConstants.CENTER);
@@ -181,15 +189,18 @@ public class PrivateDashboard {
 		frame.getContentPane().add(lblOverview);
 		
 		JLabel lblComparison = new JLabel("Comparison");
+		lblComparison.setOpaque(true);
 		lblComparison.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		lblComparison.setBackground(Color.WHITE);
+		lblComparison.setBackground(new Color(0, 204, 204));
 		lblComparison.setHorizontalAlignment(SwingConstants.CENTER);
 		lblComparison.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblComparison.setBorder(new LineBorder(new Color(0, 0, 0)));
 		lblComparison.setBounds(440, 14, 86, 29);
 		frame.getContentPane().add(lblComparison);
 		
-		JLabel lblIdeas = new JLabel("Ideas");
+		JLabel lblIdeas = new JLabel("Idea Competition");
+		lblIdeas.setBackground(new Color(51, 204, 204));
+		lblIdeas.setOpaque(true);
 		lblIdeas.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -201,7 +212,7 @@ public class PrivateDashboard {
 		lblIdeas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblIdeas.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblIdeas.setBounds(613, 14, 86, 29);
+		lblIdeas.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeas);
 	
 		
