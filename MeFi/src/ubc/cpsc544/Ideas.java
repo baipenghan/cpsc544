@@ -1,62 +1,44 @@
 package ubc.cpsc544;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
-import javax.swing.JToggleButton;
-import javax.swing.JTextPane;
-import javax.swing.SwingConstants;
-import java.awt.Font;
-import javax.swing.DefaultComboBoxModel;
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Point;
-import javax.swing.JSplitPane;
-import javax.swing.Box;
-import javax.swing.JLayeredPane;
-import javax.swing.JToolBar;
 import java.awt.Color;
-import javax.swing.JSeparator;
-import javax.swing.ImageIcon;
+import java.awt.Cursor;
+import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.InputStream;
 
-import javax.swing.JSpinner;
-import javax.swing.JTable;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JSeparator;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
 
-public class Main {
+public class Ideas {
 
 	private JFrame frame;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Main window = new Main();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Ideas window = new Ideas();
+//					window.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the application.
 	 */
-	public Main() {
+	public Ideas() {
 		initialize();
 	}
 
@@ -64,10 +46,6 @@ public class Main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-//		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-//		InputStream Picachu = classLoader.getResourceAsStream("/Picachu.gif");
-//		Image picachu= ImageIO.read(input);
-//	      LblLogo = new JLabel( new ImageIcon( logo ) );
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 735, 530);
@@ -109,7 +87,7 @@ public class Main {
 				lblNewLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
-		lblNewLabel.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/UpArrow.png")));
+		lblNewLabel.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/UpArrow.png")));
 		lblNewLabel.setBounds(60, 145, 34, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -124,7 +102,7 @@ public class Main {
 				label_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
-		label_2.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/DownArrow.png")));
+		label_2.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/DownArrow.png")));
 		label_2.setBounds(62, 227, 34, 16);
 		frame.getContentPane().add(label_2);
 		
@@ -139,7 +117,7 @@ public class Main {
 				label.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
-		label.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/UpArrow.png")));
+		label.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/UpArrow.png")));
 		label.setBounds(60, 344, 34, 16);
 		frame.getContentPane().add(label);
 		
@@ -154,7 +132,7 @@ public class Main {
 				label_3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
-		label_3.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/DownArrow.png")));
+		label_3.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/DownArrow.png")));
 		label_3.setBounds(62, 427, 34, 16);
 		frame.getContentPane().add(label_3);
 		
@@ -211,11 +189,17 @@ public class Main {
 		final JLabel label_1 = new JLabel("");
 		label_1.addMouseListener(new MouseAdapter() {
 			@Override
+			public void mouseReleased(MouseEvent e) {
+				Profile pikachu = new Profile();
+				pikachu.setVisible(true);
+
+			}
+			@Override
 			public void mouseEntered(MouseEvent e) {
-				//label_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				label_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
 		});
-		label_1.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/Picachu.png")));
+		label_1.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Picachu.png")));
 		label_1.setBounds(612, 125, 103, 101);
 		frame.getContentPane().add(label_1);
 		
@@ -230,7 +214,7 @@ public class Main {
 		frame.getContentPane().add(txtpnRank);
 		
 		JLabel label_4 = new JLabel("");
-		label_4.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/Turtle.png")));
+		label_4.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Turtle.png")));
 		label_4.setBounds(612, 339, 114, 115);
 		frame.getContentPane().add(label_4);
 		
@@ -274,5 +258,13 @@ public class Main {
 		frame.getContentPane().add(btnTopYearly);
 		
 		
+	}
+
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
 	}
 }
