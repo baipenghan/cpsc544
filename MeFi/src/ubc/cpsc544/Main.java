@@ -30,6 +30,8 @@ import java.io.InputStream;
 
 import javax.swing.JSpinner;
 import javax.swing.JTable;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main {
 
@@ -72,19 +74,13 @@ public class Main {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(568, 22, 147, 27);
-		frame.getContentPane().add(comboBox);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Newest", "Top 5 Monthly", "Top 5 Yearly"}));
-		comboBox.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		
 		JLabel lblProposedSuggestions = new JLabel("Proposed Suggestions");
-		lblProposedSuggestions.setBounds(138, 15, 271, 30);
+		lblProposedSuggestions.setBounds(222, 10, 271, 30);
 		frame.getContentPane().add(lblProposedSuggestions);
 		lblProposedSuggestions.setFont(new Font("Helvetica", Font.PLAIN, 25));
 		
 		JLabel lblSortedBy = new JLabel("Sorted by");
-		lblSortedBy.setBounds(503, 26, 61, 16);
+		lblSortedBy.setBounds(68, 52, 61, 16);
 		frame.getContentPane().add(lblSortedBy);
 		
 		JSeparator separator = new JSeparator();
@@ -93,12 +89,12 @@ public class Main {
 		
 		final JLabel label_5 = new JLabel("4");
 		label_5.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_5.setBounds(68, 165, 59, 43);
+		label_5.setBounds(68, 173, 59, 43);
 		frame.getContentPane().add(label_5);
 		
 		final JLabel label_6 = new JLabel("2");
 		label_6.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_6.setBounds(68, 378, 55, 43);
+		label_6.setBounds(68, 371, 55, 43);
 		frame.getContentPane().add(label_6);
 		
 		final JLabel lblNewLabel = new JLabel("");
@@ -114,7 +110,7 @@ public class Main {
 			}
 		});
 		lblNewLabel.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/UpArrow.png")));
-		lblNewLabel.setBounds(60, 131, 34, 16);
+		lblNewLabel.setBounds(60, 145, 34, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
 		final JLabel label_2 = new JLabel("");
@@ -144,7 +140,7 @@ public class Main {
 			}
 		});
 		label.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/UpArrow.png")));
-		label.setBounds(60, 339, 34, 16);
+		label.setBounds(60, 344, 34, 16);
 		frame.getContentPane().add(label);
 		
 		final JLabel label_3 = new JLabel("");
@@ -159,7 +155,7 @@ public class Main {
 			}
 		});
 		label_3.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_3.setBounds(62, 438, 34, 16);
+		label_3.setBounds(62, 427, 34, 16);
 		frame.getContentPane().add(label_3);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -184,7 +180,7 @@ public class Main {
 			}
 		});
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		lblNewLabel_1.setBounds(66, 69, 343, 27);
+		lblNewLabel_1.setBounds(66, 101, 343, 27);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		final JTextPane txtpnIThinkThe = new JTextPane();
@@ -199,15 +195,15 @@ public class Main {
 			}
 		});
 		txtpnIThinkThe.setText("I think the optimal temperature for house heating is 23, because we can save a lot of energy in this way.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
-		txtpnIThinkThe.setBounds(126, 132, 319, 111);
+		txtpnIThinkThe.setBounds(126, 146, 319, 111);
 		frame.getContentPane().add(txtpnIThinkThe);
 		
-		JTextPane txtpnWeShouldLeave = new JTextPane();
+		final JTextPane txtpnWeShouldLeave = new JTextPane();
 		txtpnWeShouldLeave.setText("We should leave our lights off when we leave our apartment.\n\n\t\t   \n\t\t  \n\t\t  Edited Nov 1 at 13:36 ");
 		txtpnWeShouldLeave.setBounds(125, 347, 319, 107);
 		frame.getContentPane().add(txtpnWeShouldLeave);
 		
-		JLabel lblSuggestionForEnegy = new JLabel("Suggestion for enegy saving");
+		final JLabel lblSuggestionForEnegy = new JLabel("Suggestion for enegy saving");
 		lblSuggestionForEnegy.setFont(new Font("Lucida Grande", Font.BOLD, 16));
 		lblSuggestionForEnegy.setBounds(60, 300, 319, 27);
 		frame.getContentPane().add(lblSuggestionForEnegy);
@@ -220,17 +216,17 @@ public class Main {
 			}
 		});
 		label_1.setIcon(new ImageIcon(Main.class.getResource("/ubc/cpsc544/Picachu.png")));
-		label_1.setBounds(612, 121, 103, 101);
+		label_1.setBounds(612, 125, 103, 101);
 		frame.getContentPane().add(label_1);
 		
 		JLabel lblPatrick = new JLabel("Patrick");
 		lblPatrick.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblPatrick.setBounds(632, 93, 61, 16);
+		lblPatrick.setBounds(632, 97, 61, 16);
 		frame.getContentPane().add(lblPatrick);
 		
 		JTextPane txtpnRank = new JTextPane();
 		txtpnRank.setText("Rank  \n\n90%");
-		txtpnRank.setBounds(554, 156, 45, 66);
+		txtpnRank.setBounds(554, 160, 45, 66);
 		frame.getContentPane().add(txtpnRank);
 		
 		JLabel label_4 = new JLabel("");
@@ -247,5 +243,36 @@ public class Main {
 		txtpnRank_1.setText("Rank  \n\n75%");
 		txtpnRank_1.setBounds(554, 378, 45, 66);
 		frame.getContentPane().add(txtpnRank_1);
+		
+		JButton btnNewest = new JButton("Newest");
+		btnNewest.setBounds(148, 47, 117, 29);
+		frame.getContentPane().add(btnNewest);
+		
+		JButton btnTopMonthly = new JButton("Top 5 Monthly");
+		btnTopMonthly.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				label_5.setLocation(label_5.getX(), label_5.getY() + 201);
+				lblNewLabel.setLocation(lblNewLabel.getX(), lblNewLabel.getY() + 201);
+				label_2.setLocation(label_2.getX(), label_2.getY() + 201);
+				lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 201);
+				txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 201);
+				
+				label_6.setLocation(label_6.getX(), label_6.getY() - 207);
+				label.setLocation(label.getX(), label.getY() - 207);
+				label_3.setLocation(label_3.getX(), label_3.getY() - 207);
+				txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 207);
+				lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 207);
+				
+			}
+		});
+		btnTopMonthly.setBounds(305, 47, 117, 29);
+		frame.getContentPane().add(btnTopMonthly);
+		
+		JButton btnTopYearly = new JButton("Top 5 Yearly\n");
+		btnTopYearly.setBounds(470, 47, 117, 29);
+		frame.getContentPane().add(btnTopYearly);
+		
+		
 	}
 }
