@@ -21,6 +21,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import java.awt.FlowLayout;
+import javax.swing.JRadioButton;
 
 public class PrivateDashboard {
 
@@ -104,14 +105,6 @@ public class PrivateDashboard {
 		lblUbcEnergyDashboard.setBorder(new LineBorder(new Color(0, 0, 0)));
 		lblUbcEnergyDashboard.setBounds(10, 14, 174, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
-		
-		JTextPane txtpnIdeas = new JTextPane();
-		txtpnIdeas.setEditable(false);
-		txtpnIdeas.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtpnIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
-		txtpnIdeas.setMargin(new Insets(30, 30, 30, 30));
-		txtpnIdeas.setBounds(789, 69, 208, 157);
-		frame.getContentPane().add(txtpnIdeas);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 221, 174, 284);
@@ -214,6 +207,31 @@ public class PrivateDashboard {
 		lblIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
 		lblIdeas.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeas);
+		
+		JLabel lblUnits = new JLabel("Units:");
+		lblUnits.setBounds(795, 76, 61, 16);
+		frame.getContentPane().add(lblUnits);
+		
+		JRadioButton rdbtnKilowatt = new JRadioButton("Kilo-Watt Hour kWH");
+		rdbtnKilowatt.setSelected(true);
+		rdbtnKilowatt.setBounds(805, 104, 160, 23);
+		frame.getContentPane().add(rdbtnKilowatt);
+		
+		JRadioButton rdbtnIbsOfCo = new JRadioButton("Ibs of CO2");
+		rdbtnIbsOfCo.setBounds(805, 139, 160, 23);
+		frame.getContentPane().add(rdbtnIbsOfCo);
+		
+		JRadioButton rdbtnDollarValue = new JRadioButton("Dollar Value");
+		rdbtnDollarValue.setBounds(805, 174, 160, 23);
+		frame.getContentPane().add(rdbtnDollarValue);
+		
+		JTextPane txtpnIdeas = new JTextPane();
+		txtpnIdeas.setEditable(false);
+		txtpnIdeas.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtpnIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
+		txtpnIdeas.setMargin(new Insets(30, 30, 30, 30));
+		txtpnIdeas.setBounds(789, 69, 208, 157);
+		frame.getContentPane().add(txtpnIdeas);
 	
 		
 	}

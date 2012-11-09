@@ -16,6 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
+import javax.swing.JRadioButton;
+import java.awt.FlowLayout;
 
 public class PublicDashboard {
 
@@ -101,10 +103,25 @@ public class PublicDashboard {
 		panel_1.add(label);
 		
 		JPanel panel_3 = new JPanel();
+		FlowLayout flowLayout = (FlowLayout) panel_3.getLayout();
+		flowLayout.setAlignment(FlowLayout.LEFT);
 		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_3.setBackground(Color.WHITE);
 		panel_3.setBounds(10, 364, 174, 141);
 		frame.getContentPane().add(panel_3);
+		
+		JLabel label_5 = new JLabel("Units:");
+		panel_3.add(label_5);
+		
+		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		radioButton.setSelected(true);
+		panel_3.add(radioButton);
+		
+		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		panel_3.add(radioButton_1);
+		
+		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		panel_3.add(radioButton_2);
 		
 		JPanel panel_4 = new JPanel();
 		panel_4.setBorder(new LineBorder(new Color(0, 0, 0)));
