@@ -63,7 +63,7 @@ public class Ideas {
 		label_5.setBounds(68, 269, 59, 43);
 		frame.getContentPane().add(label_5);
 		
-		final JLabel label_6 = new JLabel("2");
+		final JLabel label_6 = new JLabel("-2");
 		label_6.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
 		label_6.setBounds(69, 492, 55, 43);
 		frame.getContentPane().add(label_6);
@@ -109,7 +109,10 @@ public class Ideas {
 		label.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_6.setText(Integer.toString(Integer.parseInt(label_6.getText()) + 1));
+				if(label_6.getText().equals("-3"))
+					label_6.setText(Integer.toString(-2));
+				else
+				label_6.setText(Integer.toString(-1));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -124,7 +127,10 @@ public class Ideas {
 		label_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_6.setText(Integer.toString(Integer.parseInt(label_6.getText()) - 1));
+				if(label_6.getText().equals("-1"))
+					label_6.setText(Integer.toString(-2));
+				else
+				label_6.setText(Integer.toString(-3));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
