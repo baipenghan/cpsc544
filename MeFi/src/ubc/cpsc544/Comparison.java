@@ -127,14 +127,42 @@ public class Comparison {
 		JLabel label = new JLabel("Units:");
 		panel.add(label);
 		
-		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		final JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		final JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		final JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		radioButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(false);
+				radioButton_1.setSelected(false);
+				radioButton_2.setSelected(true);
+			}
+		});
+		
+		radioButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(false);
+				radioButton_1.setSelected(true);
+				radioButton_2.setSelected(false);
+			}
+		});
+		
+		radioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(true);
+				radioButton_1.setSelected(false);
+				radioButton_2.setSelected(false);
+			}
+		});
 		radioButton.setSelected(true);
 		panel.add(radioButton);
 		
-		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		
 		panel.add(radioButton_1);
 		
-		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		
 		panel.add(radioButton_2);
 		
 		JLabel label_1 = new JLabel("");
