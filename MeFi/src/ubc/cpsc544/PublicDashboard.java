@@ -1,5 +1,6 @@
 package ubc.cpsc544;
 
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -19,6 +20,8 @@ import javax.swing.border.LineBorder;
 import javax.swing.JRadioButton;
 import java.awt.FlowLayout;
 import javax.swing.JSeparator;
+
+import org.jfree.chart.ChartPanel;
 
 public class PublicDashboard {
 
@@ -95,17 +98,23 @@ public class PublicDashboard {
 		lblForgotPassword.setBounds(895, 44, 102, 14);
 		frame.getContentPane().add(lblForgotPassword);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(194, 69, 517, 436);
-		frame.getContentPane().add(panel_1);
-		panel_1.setLayout(null);
+		JPanel panel_MainChartPanel = new JPanel();
+		panel_MainChartPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_MainChartPanel.setBackground(Color.WHITE);
+		panel_MainChartPanel.setBounds(194, 69, 517, 436);
+		frame.getContentPane().add(panel_MainChartPanel);
+		panel_MainChartPanel.setLayout(null);
 		
-		JLabel label = new JLabel("");
-		label.setBounds(0, 0, 500, 406);
-		label.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/3DBuildingView.png")));
-		panel_1.add(label);
+//		JLabel label = new JLabel("");
+//		label.setBounds(0, 0, 67, 57);
+//		label.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/3DBuildingView.png")));
+//		panel_MainChartPanel.add(label);
+		
+		BarChart barChart = new BarChart();
+		ChartPanel chartPanel = barChart.getChartPanel();
+		chartPanel.setVisible(true);
+		chartPanel.setBounds(0, 0, 517, 436);
+		panel_MainChartPanel.add(chartPanel);
 		
 		JPanel panel_Units = new JPanel();
 		FlowLayout fl_panel_Units = (FlowLayout) panel_Units.getLayout();
