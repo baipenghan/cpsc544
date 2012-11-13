@@ -46,7 +46,7 @@ public class Comment extends JFrame {
 	 */
 	public Comment() {
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		setBounds(150, 150,  1024, 768);
+		setBounds(100, 100,  1024, 768);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -93,6 +93,13 @@ public class Comment extends JFrame {
 		contentPane.add(lblIdeaCompetition);
 		
 		JLabel label_9 = new JLabel("Comparison");
+		label_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Comparison comp = new Comparison();
+				comp.getFrame().setVisible(true);
+			}
+		});
 		label_9.setOpaque(true);
 		label_9.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		label_9.setHorizontalAlignment(SwingConstants.CENTER);
@@ -109,14 +116,17 @@ public class Comment extends JFrame {
 		
 		final JLabel label_2 = new JLabel("4");
 		label_2.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_2.setBounds(78, 155, 59, 43);
+		label_2.setBounds(78, 156, 59, 43);
 		contentPane.add(label_2);
 		
 		final JLabel label_1 = new JLabel("");
 		label_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_2.setText(Integer.toString(Integer.parseInt(label_2.getText()) + 1));
+				if(label_2.getText().equals("5"))
+					;
+				else
+					label_2.setText(Integer.toString(Integer.parseInt(label_2.getText()) + 1));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -133,7 +143,10 @@ public class Comment extends JFrame {
 		label_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_2.setText(Integer.toString(Integer.parseInt(label_2.getText()) - 1));
+				if(label_2.getText().equals("3"))
+					;
+				else
+					label_2.setText(Integer.toString(Integer.parseInt(label_2.getText()) - 1));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
