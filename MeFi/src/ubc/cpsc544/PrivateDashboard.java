@@ -2,26 +2,19 @@ package ubc.cpsc544;
 
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.EventQueue;
+import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JSeparator;
-import javax.swing.JTextPane;
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
 import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
-import javax.swing.JTable;
-import javax.swing.JTextArea;
-import java.awt.FlowLayout;
 import javax.swing.JRadioButton;
+import javax.swing.JSeparator;
+import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
 
 public class PrivateDashboard {
 
