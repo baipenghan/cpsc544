@@ -100,8 +100,10 @@ public class PublicDashboard {
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(194, 69, 517, 436);
 		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
 		
 		JLabel label = new JLabel("");
+		label.setBounds(0, 0, 500, 406);
 		label.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/3DBuildingView.png")));
 		panel_1.add(label);
 		
@@ -113,9 +115,9 @@ public class PublicDashboard {
 		panel_Units.setBounds(10, 364, 174, 141);
 		frame.getContentPane().add(panel_Units);
 		
-		JLabel label_Units = new JLabel("Units:");
-		label_Units.setFont(new Font("Tahoma", Font.BOLD, 14));
-		panel_Units.add(label_Units);
+		JLabel lblUnits = new JLabel("Units");
+		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_Units.add(lblUnits);
 		
 		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
 		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));

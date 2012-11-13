@@ -226,9 +226,9 @@ public class PrivateDashboard {
 		panel_Units.setBounds(791, 69, 174, 141);
 		frame.getContentPane().add(panel_Units);
 		
-		JLabel label_Units = new JLabel("Units:");
-		label_Units.setFont(new Font("Tahoma", Font.BOLD, 14));
-		panel_Units.add(label_Units);
+		JLabel lblUnits = new JLabel("Units");
+		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_Units.add(lblUnits);
 		
 		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
 		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
