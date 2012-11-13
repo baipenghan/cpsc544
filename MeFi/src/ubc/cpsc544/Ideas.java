@@ -204,10 +204,10 @@ public class Ideas {
 			}
 		});
 		label_1.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Picachu.png")));
-		label_1.setBounds(612, 237, 103, 101);
+		label_1.setBounds(612, 238, 103, 101);
 		frame.getContentPane().add(label_1);
 		
-		JLabel lblPatrick = new JLabel("Patrick");
+		final JLabel lblPatrick = new JLabel("Patrick");
 		lblPatrick.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -217,30 +217,52 @@ public class Ideas {
 		});
 		lblPatrick.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPatrick.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblPatrick.setBounds(632, 209, 61, 16);
+		lblPatrick.setBounds(632, 210, 61, 16);
 		frame.getContentPane().add(lblPatrick);
 		
-		JTextPane txtpnRank = new JTextPane();
+		final JTextPane txtpnRank = new JTextPane();
 		txtpnRank.setText("Rank  \n\n90%");
-		txtpnRank.setBounds(554, 272, 45, 66);
+		txtpnRank.setBounds(554, 273, 45, 66);
 		frame.getContentPane().add(txtpnRank);
 		
-		JLabel label_4 = new JLabel("");
+		final JLabel label_4 = new JLabel("");
 		label_4.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Turtle.png")));
 		label_4.setBounds(602, 447, 114, 115);
 		frame.getContentPane().add(label_4);
 		
-		JLabel lblKatherine = new JLabel("Katherine");
+		final JLabel lblKatherine = new JLabel("Katherine");
 		lblKatherine.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
 		lblKatherine.setBounds(618, 421, 81, 16);
 		frame.getContentPane().add(lblKatherine);
 		
-		JTextPane txtpnRank_1 = new JTextPane();
+		final JTextPane txtpnRank_1 = new JTextPane();
 		txtpnRank_1.setText("Rank  \n\n75%");
-		txtpnRank_1.setBounds(544, 486, 45, 66);
+		txtpnRank_1.setBounds(554, 485, 45, 66);
 		frame.getContentPane().add(txtpnRank_1);
 		
 		JButton btnNewest = new JButton("Newest");
+		btnNewest.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(label_5.getY() > 400){
+					label_5.setLocation(label_5.getX(), label_5.getY() - 224);
+					lblNewLabel.setLocation(lblNewLabel.getX(), lblNewLabel.getY() - 224);
+					label_2.setLocation(label_2.getX(), label_2.getY() - 224);
+					lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() - 224);
+					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() - 224);
+					label_1.setLocation(label_1.getX(), label_1.getY() - 211);
+					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() - 211);
+				
+					label_6.setLocation(label_6.getX(), label_6.getY() + 224);
+					label.setLocation(label.getX(), label.getY() + 224);
+					label_3.setLocation(label_3.getX(), label_3.getY() + 224);
+					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() + 224);
+					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() + 224);
+					label_4.setLocation(label_4.getX(), label_4.getY() + 211);
+					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() + 211);
+				}
+			}
+		});
 		btnNewest.setBounds(220, 95, 117, 29);
 		frame.getContentPane().add(btnNewest);
 		
@@ -248,17 +270,27 @@ public class Ideas {
 		btnTopMonthly.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				label_5.setLocation(label_5.getX(), label_5.getY() + 201);
-				lblNewLabel.setLocation(lblNewLabel.getX(), lblNewLabel.getY() + 201);
-				label_2.setLocation(label_2.getX(), label_2.getY() + 201);
-				lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 201);
-				txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 201);
+				if(label_5.getY() < 400){
+					label_5.setLocation(label_5.getX(), label_5.getY() + 224);
+					lblNewLabel.setLocation(lblNewLabel.getX(), lblNewLabel.getY() + 224);
+					label_2.setLocation(label_2.getX(), label_2.getY() + 224);
+					lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 224);
+					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 224);
+					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
+					label_1.setLocation(label_1.getX(), label_1.getY() + 211);
+					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() + 211);
+					
 				
-				label_6.setLocation(label_6.getX(), label_6.getY() - 207);
-				label.setLocation(label.getX(), label.getY() - 207);
-				label_3.setLocation(label_3.getX(), label_3.getY() - 207);
-				txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 207);
-				lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 207);
+					label_6.setLocation(label_6.getX(), label_6.getY() - 224);
+					label.setLocation(label.getX(), label.getY() - 224);
+					label_3.setLocation(label_3.getX(), label_3.getY() - 224);
+					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 224);
+					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 224);
+					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
+					label_4.setLocation(label_4.getX(), label_4.getY() - 211);
+					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() - 211);
+					
+				}
 				
 			}
 		});
