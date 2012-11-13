@@ -136,6 +136,8 @@ public class PublicDashboard {
 		panel_Units.add(radioButton_2);
 		
 		JPanel panel_4 = new JPanel();
+		FlowLayout flowLayout_1 = (FlowLayout) panel_4.getLayout();
+		flowLayout_1.setAlignment(FlowLayout.LEFT);
 		panel_4.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_4.setBackground(Color.WHITE);
 		panel_4.setBounds(10, 521, 701, 185);
@@ -147,6 +149,11 @@ public class PublicDashboard {
 		txtpnFloors.setText("Floors:  05\r\nOccupants:  120\r\r\nSt. John\u2019s College is UBC\u2019s international graduate college. A magnet for international and multicultural exchange, the College offers an academic setting that encourages discussion, debate and cultural expression, all enlivened by the participation of resident graduate students who come from diverse cultural backgrounds.");
 		txtpnFloors.setBounds(12, 12, 666, 134);
 		panel_4.add(txtpnFloors);
+		
+		JTextPane txtpnNoFloors = new JTextPane();
+		txtpnNoFloors.setFont(new Font("Helvetica", Font.PLAIN, 15));
+		txtpnNoFloors.setText("NO. FLOORS  \t-  05\nOCCUPANTS  \t-  120\n\nSt. John\u2019s College is UBC\u2019s international graduate college. A magnet for international\n and multicultural exchange, the College offers an academic setting that encourages \ndiscussion, debate and cultural expression, all enlivened by the participation of \nresident graduate students who come from diverse cultural backgrounds.");
+		panel_4.add(txtpnNoFloors);
 		
 		JPanel panel_5 = new JPanel();
 		panel_5.setBorder(new LineBorder(new Color(0, 0, 0)));

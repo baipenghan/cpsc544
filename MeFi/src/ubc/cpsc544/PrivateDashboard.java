@@ -192,6 +192,14 @@ public class PrivateDashboard {
 		frame.getContentPane().add(lblOverview);
 		
 		JLabel lblComparison = new JLabel("Comparison");
+		lblComparison.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Comparison comp = new Comparison();
+				comp.getFrame().setVisible(true);
+				
+			}
+		});
 		lblComparison.setOpaque(true);
 		lblComparison.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblComparison.setBackground(new Color(0, 204, 204));
