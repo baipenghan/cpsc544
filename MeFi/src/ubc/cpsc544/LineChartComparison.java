@@ -4,6 +4,7 @@ import java.awt.BasicStroke;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
+import java.util.List;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -14,7 +15,6 @@ import org.jfree.chart.plot.DefaultDrawingSupplier;
 import org.jfree.chart.plot.DrawingSupplier;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
-import org.jfree.chart.title.LegendTitle;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 
@@ -25,11 +25,13 @@ import org.jfree.data.category.DefaultCategoryDataset;
 public class LineChartComparison {
 
 	private ChartPanel chartPanel;
+	private List<String> names;
 
 	/**
 	 * Creates a new demo.
 	 */
-	public LineChartComparison() {
+	public LineChartComparison(List<String> names) {
+		this.names = names;
 		final CategoryDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		this.chartPanel = new ChartPanel(chart);
@@ -46,9 +48,9 @@ public class LineChartComparison {
 	private CategoryDataset createDataset() {
 
 		// row keys...
-		final String series1 = "Jenny";
-		final String series2 = "Joe";
-		final String series3 = "Matt";
+		final String series1 = "Me";
+		final String series2 = "Jenny";
+		final String series3 = "Ken";
 
 		// column keys...
 		final String type1 = "Jan";
@@ -83,32 +85,34 @@ public class LineChartComparison {
 		dataset.addValue(data[0][10], series1, type11);
 		dataset.addValue(data[0][11], series1, type12);
 
-		dataset.addValue(data[1][0], series2, type1);
-		dataset.addValue(data[1][1], series2, type2);
-		dataset.addValue(data[1][2], series2, type3);
-		dataset.addValue(data[1][3], series2, type4);
-		dataset.addValue(data[1][4], series2, type5);
-		dataset.addValue(data[1][5], series2, type6);
-		dataset.addValue(data[1][6], series2, type7);
-		dataset.addValue(data[1][7], series2, type8);
-		dataset.addValue(data[1][8], series2, type9);
-		dataset.addValue(data[1][9], series2, type10);
-		dataset.addValue(data[1][10], series2, type11);
-		dataset.addValue(data[1][11], series2, type12);
-
-		dataset.addValue(data[2][0], series3, type1);
-		dataset.addValue(data[2][1], series3, type2);
-		dataset.addValue(data[2][2], series3, type3);
-		dataset.addValue(data[2][3], series3, type4);
-		dataset.addValue(data[2][4], series3, type5);
-		dataset.addValue(data[2][5], series3, type6);
-		dataset.addValue(data[2][6], series3, type7);
-		dataset.addValue(data[2][7], series3, type8);
-		dataset.addValue(data[2][8], series3, type9);
-		dataset.addValue(data[2][9], series3, type10);
-		dataset.addValue(data[2][10], series3, type11);
-		dataset.addValue(data[2][11], series3, type12);
-
+		if (names.contains("Jenny")) {
+			dataset.addValue(data[1][0], series2, type1);
+			dataset.addValue(data[1][1], series2, type2);
+			dataset.addValue(data[1][2], series2, type3);
+			dataset.addValue(data[1][3], series2, type4);
+			dataset.addValue(data[1][4], series2, type5);
+			dataset.addValue(data[1][5], series2, type6);
+			dataset.addValue(data[1][6], series2, type7);
+			dataset.addValue(data[1][7], series2, type8);
+			dataset.addValue(data[1][8], series2, type9);
+			dataset.addValue(data[1][9], series2, type10);
+			dataset.addValue(data[1][10], series2, type11);
+			dataset.addValue(data[1][11], series2, type12);
+		}
+		if (names.contains("Ken")) {
+			dataset.addValue(data[2][0], series3, type1);
+			dataset.addValue(data[2][1], series3, type2);
+			dataset.addValue(data[2][2], series3, type3);
+			dataset.addValue(data[2][3], series3, type4);
+			dataset.addValue(data[2][4], series3, type5);
+			dataset.addValue(data[2][5], series3, type6);
+			dataset.addValue(data[2][6], series3, type7);
+			dataset.addValue(data[2][7], series3, type8);
+			dataset.addValue(data[2][8], series3, type9);
+			dataset.addValue(data[2][9], series3, type10);
+			dataset.addValue(data[2][10], series3, type11);
+			dataset.addValue(data[2][11], series3, type12);
+		}
 		return dataset;
 
 	}
@@ -133,7 +137,6 @@ public class LineChartComparison {
 				false // urls
 				);
 
-		
 		// final StandardLegend legend = (StandardLegend) legendTitle;
 		// legend.setDisplaySeriesShapes(true);
 
@@ -170,7 +173,7 @@ public class LineChartComparison {
 		final LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot.getRenderer();
 		// renderer.setDrawShapes(true);
 		renderer.setItemLabelsVisible(true);
-//		 renderer.setLabelGenerator(new StandardCategoryLabelGenerator());
+		// renderer.setLabelGenerator(new StandardCategoryLabelGenerator());
 
 		// customise the range axis...
 		final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
@@ -178,9 +181,9 @@ public class LineChartComparison {
 		rangeAxis.setAutoRangeIncludesZero(false);
 		rangeAxis.setUpperMargin(0.12);
 
-//		LegendTitle legendTitle = chart.getLegend();
-//		legendTitle.setVisible(true);
-		
+		// LegendTitle legendTitle = chart.getLegend();
+		// legendTitle.setVisible(true);
+
 		return chart;
 
 	}
