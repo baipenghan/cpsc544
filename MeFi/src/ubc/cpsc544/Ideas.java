@@ -327,7 +327,7 @@ public class Ideas {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(746, 126, 240, 493);
+		panel_1.setBounds(745, 173, 240, 493);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -396,6 +396,15 @@ public class Ideas {
 		JLabel label_8 = new JLabel("");
 		label_8.setBounds(612, 291, 103, 101);
 		frame.getContentPane().add(label_8);
+		
+		JLabel lblProposeIdea = new JLabel("Propose Idea");
+		lblProposeIdea.setOpaque(true);
+		lblProposeIdea.setHorizontalAlignment(SwingConstants.CENTER);
+		lblProposeIdea.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblProposeIdea.setBorder(new LineBorder(new Color(0, 0, 0)));
+		lblProposeIdea.setBackground(new Color(0, 204, 102));
+		lblProposeIdea.setBounds(745, 93, 133, 29);
+		frame.getContentPane().add(lblProposeIdea);
 		
 		
 	}
