@@ -1,7 +1,6 @@
 package ubc.cpsc544;
 
 import java.awt.BasicStroke;
-import java.awt.Color;
 import java.awt.Polygon;
 import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
@@ -15,23 +14,22 @@ import org.jfree.chart.plot.DefaultDrawingSupplier;
 import org.jfree.chart.plot.DrawingSupplier;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
+import org.jfree.chart.title.LegendTitle;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.ui.ApplicationFrame;
-import org.jfree.ui.RefineryUtilities;
 
 /**
  * A line chart demo showing the use of a custom drawing supplier.
  * 
  */
-public class LineChart {
+public class LineChartOwnHistory {
 
 	private ChartPanel chartPanel;
 
 	/**
 	 * Creates a new demo.
 	 */
-	public LineChart() {
+	public LineChartOwnHistory() {
 		final CategoryDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		this.chartPanel = new ChartPanel(chart);
@@ -55,7 +53,7 @@ public class LineChart {
 		// column keys...
 		final String type1 = "Jan";
 		final String type2 = "Feb";
-		final String type3 = "March";
+		final String type3 = "Mar";
 		final String type4 = "April";
 		final String type5 = "May";
 		final String type6 = "June";
@@ -69,10 +67,8 @@ public class LineChart {
 		// create the dataset...
 		final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
-		final double[][] data = new double[][] {
-				{ 330.0, 430.0, 350.0, 880.0, 540.0, 100.0, 430.0, 350.0, 680.0, 540.0, 100.0, 430.0 },
-				{ 100.0, 630.0, 350.0, 980.0, 540.0, 100.0, 430.0, 350.0, 680.0, 410.0, 330.0, 430.0 },
-				{ 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0 } };
+		final double[][] data = new double[][] { { 330.0, 430.0, 350.0, 880.0, 540.0, 100.0, 430.0, 350.0, 680.0, 540.0, 100.0, 430.0 },
+				{ 100.0, 630.0, 350.0, 980.0, 540.0, 100.0, 430.0, 350.0, 680.0, 410.0, 330.0, 430.0 }, { 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0 } };
 
 		dataset.addValue(data[0][0], series1, type1);
 		dataset.addValue(data[0][1], series1, type2);
@@ -86,7 +82,7 @@ public class LineChart {
 		dataset.addValue(data[0][9], series1, type10);
 		dataset.addValue(data[0][10], series1, type11);
 		dataset.addValue(data[0][11], series1, type12);
-                         
+
 		dataset.addValue(data[1][0], series2, type1);
 		dataset.addValue(data[1][1], series2, type2);
 		dataset.addValue(data[1][2], series2, type3);
@@ -99,7 +95,7 @@ public class LineChart {
 		dataset.addValue(data[1][9], series2, type10);
 		dataset.addValue(data[1][10], series2, type11);
 		dataset.addValue(data[1][11], series2, type12);
-                         
+
 		dataset.addValue(data[2][0], series3, type1);
 		dataset.addValue(data[2][1], series3, type2);
 		dataset.addValue(data[2][2], series3, type3);
@@ -112,7 +108,7 @@ public class LineChart {
 		dataset.addValue(data[2][9], series3, type10);
 		dataset.addValue(data[2][10], series3, type11);
 		dataset.addValue(data[2][11], series3, type12);
-                         
+
 		return dataset;
 
 	}
@@ -128,7 +124,7 @@ public class LineChart {
 	private JFreeChart createChart(final CategoryDataset dataset) {
 
 		final JFreeChart chart = ChartFactory.createLineChart("", // chart title
-				"Type", // domain axis label
+				"", // domain axis label
 				"Enerygy Consumption (kWH)", // range axis label
 				dataset, // data
 				PlotOrientation.VERTICAL, // orientation
@@ -137,7 +133,8 @@ public class LineChart {
 				false // urls
 				);
 
-		// final StandardLegend legend = (StandardLegend) chart.getLegend();
+		
+		// final StandardLegend legend = (StandardLegend) legendTitle;
 		// legend.setDisplaySeriesShapes(true);
 
 		final Shape[] shapes = new Shape[3];
@@ -157,39 +154,23 @@ public class LineChart {
 		ypoints = new int[] { 0, -3, 3 };
 		shapes[2] = new Polygon(xpoints, ypoints, 3);
 
-		final DrawingSupplier supplier = new DefaultDrawingSupplier(
-				DefaultDrawingSupplier.DEFAULT_PAINT_SEQUENCE,
-				DefaultDrawingSupplier.DEFAULT_OUTLINE_PAINT_SEQUENCE,
-				DefaultDrawingSupplier.DEFAULT_STROKE_SEQUENCE,
-				DefaultDrawingSupplier.DEFAULT_OUTLINE_STROKE_SEQUENCE, shapes);
+		final DrawingSupplier supplier = new DefaultDrawingSupplier(DefaultDrawingSupplier.DEFAULT_PAINT_SEQUENCE, DefaultDrawingSupplier.DEFAULT_OUTLINE_PAINT_SEQUENCE,
+				DefaultDrawingSupplier.DEFAULT_STROKE_SEQUENCE, DefaultDrawingSupplier.DEFAULT_OUTLINE_STROKE_SEQUENCE, shapes);
 		final CategoryPlot plot = chart.getCategoryPlot();
 		plot.setDrawingSupplier(supplier);
 
 		// chart.setBackgroundPaint(Color.yellow);
 
 		// set the stroke for each series...
-		plot.getRenderer().setSeriesStroke(
-				0,
-				new BasicStroke(2.0f, BasicStroke.CAP_ROUND,
-						BasicStroke.JOIN_ROUND, 1.0f,
-						new float[] { 10.0f, 6.0f }, 0.0f));
-		plot.getRenderer().setSeriesStroke(
-				1,
-				new BasicStroke(2.0f, BasicStroke.CAP_ROUND,
-						BasicStroke.JOIN_ROUND, 1.0f,
-						new float[] { 6.0f, 6.0f }, 0.0f));
-		plot.getRenderer().setSeriesStroke(
-				2,
-				new BasicStroke(2.0f, BasicStroke.CAP_ROUND,
-						BasicStroke.JOIN_ROUND, 1.0f,
-						new float[] { 2.0f, 6.0f }, 0.0f));
+		plot.getRenderer().setSeriesStroke(0, new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1.0f, new float[] { 10.0f, 6.0f }, 0.0f));
+		plot.getRenderer().setSeriesStroke(1, new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1.0f, new float[] { 6.0f, 6.0f }, 0.0f));
+		plot.getRenderer().setSeriesStroke(2, new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1.0f, new float[] { 2.0f, 6.0f }, 0.0f));
 
 		// customise the renderer...
-		final LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot
-				.getRenderer();
+		final LineAndShapeRenderer renderer = (LineAndShapeRenderer) plot.getRenderer();
 		// renderer.setDrawShapes(true);
 		renderer.setItemLabelsVisible(true);
-		// renderer.setLabelGenerator(new StandardCategoryLabelGenerator());
+//		 renderer.setLabelGenerator(new StandardCategoryLabelGenerator());
 
 		// customise the range axis...
 		final NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
@@ -197,6 +178,9 @@ public class LineChart {
 		rangeAxis.setAutoRangeIncludesZero(false);
 		rangeAxis.setUpperMargin(0.12);
 
+//		LegendTitle legendTitle = chart.getLegend();
+//		legendTitle.setVisible(true);
+		
 		return chart;
 
 	}

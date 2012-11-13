@@ -24,6 +24,10 @@ import java.awt.FlowLayout;
 import javax.swing.JCheckBox;
 
 import org.jfree.chart.ChartPanel;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class Comparison {
 	
@@ -176,60 +180,23 @@ public class Comparison {
 		label_1.setBounds(82, 513, 93, 192);
 		frame.getContentPane().add(label_1);
 		
-		JCheckBox checkBox = new JCheckBox("");
-		checkBox.setBounds(55, 518, 28, 23);
-		frame.getContentPane().add(checkBox);
-		
-		JCheckBox checkBox_1 = new JCheckBox("");
-		checkBox_1.setBounds(55, 536, 28, 23);
-		frame.getContentPane().add(checkBox_1);
-		
-		JCheckBox checkBox_2 = new JCheckBox("");
-		checkBox_2.setBounds(55, 553, 28, 23);
-		frame.getContentPane().add(checkBox_2);
-		
-		JCheckBox checkBox_3 = new JCheckBox("");
-		checkBox_3.setBounds(55, 571, 28, 23);
-		frame.getContentPane().add(checkBox_3);
-		
-		JCheckBox checkBox_4 = new JCheckBox("");
-		checkBox_4.setBounds(55, 588, 28, 23);
-		frame.getContentPane().add(checkBox_4);
-		
-		JCheckBox checkBox_5 = new JCheckBox("");
-		checkBox_5.setBounds(55, 606, 28, 23);
-		frame.getContentPane().add(checkBox_5);
-		
-		JCheckBox checkBox_6 = new JCheckBox("");
-		checkBox_6.setBounds(55, 623, 28, 23);
-		frame.getContentPane().add(checkBox_6);
-		
-		JCheckBox checkBox_7 = new JCheckBox("");
-		checkBox_7.setBounds(55, 639, 28, 23);
-		frame.getContentPane().add(checkBox_7);
-		
-		JCheckBox checkBox_8 = new JCheckBox("");
-		checkBox_8.setBounds(55, 657, 28, 23);
-		frame.getContentPane().add(checkBox_8);
-		
-		JCheckBox checkBox_9 = new JCheckBox("");
-		checkBox_9.setBounds(55, 674, 28, 23);
-		frame.getContentPane().add(checkBox_9);
-		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(Comparison.class.getResource("/ubc/cpsc544/Chart.png")));
 		lblNewLabel_1.setBounds(247, 505, 350, 231);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JCheckBox chckbxDaily = new JCheckBox("Daily");
+		chckbxDaily.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		chckbxDaily.setBounds(633, 539, 128, 23);
 		frame.getContentPane().add(chckbxDaily);
 		
 		JCheckBox chckbxWeekly = new JCheckBox("Weekly");
+		chckbxWeekly.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		chckbxWeekly.setBounds(633, 571, 128, 23);
 		frame.getContentPane().add(chckbxWeekly);
 		
-		JLabel lblCustomDurastion = new JLabel("Custom Durastion");
+		JLabel lblCustomDurastion = new JLabel("Custom Duration");
+		lblCustomDurastion.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCustomDurastion.setBounds(638, 513, 123, 16);
 		frame.getContentPane().add(lblCustomDurastion);
 		
@@ -240,10 +207,10 @@ public class Comparison {
 		frame.getContentPane().add(panel_MainChartPanel);
 		panel_MainChartPanel.setLayout(null);
 		
-		LineChart lineChart = new LineChart();
+		LineChartOwnHistory lineChart = new LineChartOwnHistory();
 		ChartPanel chartPanel = lineChart.getChartPanel();
 		chartPanel.setVisible(true);
-		chartPanel.setBounds(0, 0, 517, 436);
+		chartPanel.setBounds(0, 0, 514, 387);
 		panel_MainChartPanel.add(chartPanel);
 		
 		final JButton btnNewButton = new JButton("Add\n");
@@ -260,6 +227,50 @@ public class Comparison {
 		label_2.setIcon(new ImageIcon(Comparison.class.getResource("/ubc/cpsc544/userlist.png")));
 		label_2.setBounds(801, 100, 164, 326);
 		frame.getContentPane().add(label_2);
+		
+		JCheckBox chckbxMonthly = new JCheckBox("Monthly");
+		chckbxMonthly.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		chckbxMonthly.setBounds(633, 605, 128, 23);
+		frame.getContentPane().add(chckbxMonthly);
+		
+		JCheckBox chckbxYearly = new JCheckBox("Yearly");
+		chckbxYearly.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		chckbxYearly.setBounds(633, 639, 128, 23);
+		frame.getContentPane().add(chckbxYearly);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("");
+		chckbxNewCheckBox.setBackground(Color.WHITE);
+		chckbxNewCheckBox.setBounds(779, 168, 21, 23);
+		frame.getContentPane().add(chckbxNewCheckBox);
+		
+		JCheckBox checkBox = new JCheckBox("");
+		checkBox.setBackground(Color.WHITE);
+		checkBox.setBounds(779, 210, 21, 23);
+		frame.getContentPane().add(checkBox);
+		
+		JCheckBox checkBox_1 = new JCheckBox("");
+		checkBox_1.setBackground(Color.WHITE);
+		checkBox_1.setBounds(779, 248, 21, 23);
+		frame.getContentPane().add(checkBox_1);
+		
+		JCheckBox checkBox_2 = new JCheckBox("");
+		checkBox_2.setBackground(Color.WHITE);
+		checkBox_2.setBounds(779, 288, 21, 23);
+		frame.getContentPane().add(checkBox_2);
+		
+		JCheckBox checkBox_3 = new JCheckBox("");
+		checkBox_3.setBackground(Color.WHITE);
+		checkBox_3.setBounds(779, 329, 21, 23);
+		frame.getContentPane().add(checkBox_3);
+		
+		JCheckBox checkBox_4 = new JCheckBox("");
+		checkBox_4.setBackground(Color.WHITE);
+		checkBox_4.setBounds(779, 371, 21, 23);
+		frame.getContentPane().add(checkBox_4);
+		
+		JList list = new JList();
+		list.setBounds(830, 647, 99, -178);
+		frame.getContentPane().add(list);
 
 		
 	}
