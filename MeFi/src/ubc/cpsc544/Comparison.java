@@ -51,17 +51,24 @@ public class Comparison {
 		label_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_7.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_7.setBackground(new Color(0, 204, 204));
-		label_7.setBounds(222, 40, 86, 29);
+		label_7.setBounds(251, 14, 86, 29);
 		frame.getContentPane().add(label_7);
 		
 		JLabel lblIdeaCompetition = new JLabel("Idea Competition");
+		lblIdeaCompetition.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+					Ideas ideas = new Ideas();
+					ideas.getFrame().setVisible(true);
+			}
+		});
 		lblIdeaCompetition.setBackground(new Color(0, 206, 209));
 		lblIdeaCompetition.setOpaque(true);
 		lblIdeaCompetition.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblIdeaCompetition.setHorizontalAlignment(SwingConstants.CENTER);
 		lblIdeaCompetition.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblIdeaCompetition.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblIdeaCompetition.setBounds(484, 40, 134, 29);
+		lblIdeaCompetition.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeaCompetition);
 		
 		JLabel label_9 = new JLabel("Comparison");
@@ -71,14 +78,20 @@ public class Comparison {
 		label_9.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_9.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_9.setBackground(Color.ORANGE);
-		label_9.setBounds(359, 40, 86, 29);
+		label_9.setBounds(440, 14, 86, 29);
 		frame.getContentPane().add(label_9);
 		
-		JLabel label_10 = new JLabel("UBC Energy Dashboard");
-		label_10.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label_10.setBorder(new LineBorder(new Color(0, 0, 0)));
-		label_10.setBounds(10, 40, 174, 29);
-		frame.getContentPane().add(label_10);
+		JLabel lblBulbIcon = new JLabel("");
+		lblBulbIcon.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/bulb.png")));
+		lblBulbIcon.setBounds(12, 11, 35, 33);
+		frame.getContentPane().add(lblBulbIcon);
+		
+		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
+		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setBorder(null);
+		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
+		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(Comparison.class.getResource("/ubc/cpsc544/user.png")));

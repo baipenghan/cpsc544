@@ -283,6 +283,13 @@ public class Ideas {
 		frame.getContentPane().add(lblIdeaCompetition);
 		
 		JLabel label_9 = new JLabel("Comparison");
+		label_9.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Comparison comp = new Comparison();
+				comp.getFrame().setVisible(true);
+			}
+		});
 		label_9.setOpaque(true);
 		label_9.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		label_9.setHorizontalAlignment(SwingConstants.CENTER);
