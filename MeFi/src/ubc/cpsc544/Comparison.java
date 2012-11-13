@@ -188,6 +188,21 @@ public class Comparison {
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(247, 100, 514, 387);
 		frame.getContentPane().add(panel_1);
+		
+		final JButton btnNewButton = new JButton("Add\n");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+		});
+		btnNewButton.setBounds(883, 121, 75, 29);
+		frame.getContentPane().add(btnNewButton);
+		
+		JLabel label_2 = new JLabel("");
+		label_2.setIcon(new ImageIcon(Comparison.class.getResource("/ubc/cpsc544/userlist.png")));
+		label_2.setBounds(801, 100, 164, 326);
+		frame.getContentPane().add(label_2);
 
 		
 	}
