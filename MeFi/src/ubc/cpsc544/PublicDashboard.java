@@ -31,6 +31,7 @@ public class PublicDashboard {
 	public static void main(String[] args) {
 		try {
 		    UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+//		    UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
@@ -145,10 +146,16 @@ public class PublicDashboard {
 		lblTopIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
 		frame.getContentPane().add(lblTopIdeas);
 		
+		JLabel lblBulbIcon = new JLabel("");
+		lblBulbIcon.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/bulb.png")));
+		lblBulbIcon.setBounds(12, 11, 35, 33);
+		frame.getContentPane().add(lblBulbIcon);
+		
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblUbcEnergyDashboard.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblUbcEnergyDashboard.setBounds(10, 14, 174, 29);
+		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setBorder(null);
+		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JTextPane txtpnIdeas = new JTextPane();

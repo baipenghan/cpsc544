@@ -55,17 +55,17 @@ public class Ideas {
 		frame.getContentPane().setLayout(null);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(21, 434, 694, 12);
+		separator.setBounds(21, 372, 694, 12);
 		frame.getContentPane().add(separator);
 		
 		final JLabel label_5 = new JLabel("4");
 		label_5.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_5.setBounds(68, 322, 59, 43);
+		label_5.setBounds(68, 269, 59, 43);
 		frame.getContentPane().add(label_5);
 		
 		final JLabel label_6 = new JLabel("2");
 		label_6.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_6.setBounds(68, 547, 55, 43);
+		label_6.setBounds(69, 492, 55, 43);
 		frame.getContentPane().add(label_6);
 		
 		final JLabel lblNewLabel = new JLabel("");
@@ -81,7 +81,7 @@ public class Ideas {
 			}
 		});
 		lblNewLabel.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/UpArrow.png")));
-		lblNewLabel.setBounds(60, 294, 34, 16);
+		lblNewLabel.setBounds(60, 241, 34, 16);
 		frame.getContentPane().add(lblNewLabel);
 		
 		final JLabel label_2 = new JLabel("");
@@ -96,7 +96,7 @@ public class Ideas {
 			}
 		});
 		label_2.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_2.setBounds(62, 376, 34, 16);
+		label_2.setBounds(62, 323, 34, 16);
 		frame.getContentPane().add(label_2);
 		
 		final JLabel label = new JLabel("");
@@ -111,7 +111,7 @@ public class Ideas {
 			}
 		});
 		label.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/UpArrow.png")));
-		label.setBounds(60, 520, 34, 16);
+		label.setBounds(61, 465, 34, 16);
 		frame.getContentPane().add(label);
 		
 		final JLabel label_3 = new JLabel("");
@@ -126,17 +126,17 @@ public class Ideas {
 			}
 		});
 		label_3.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_3.setBounds(62, 603, 34, 16);
+		label_3.setBounds(63, 548, 34, 16);
 		frame.getContentPane().add(label_3);
 		
 		JSeparator separator_1 = new JSeparator();
 		separator_1.setOrientation(SwingConstants.VERTICAL);
-		separator_1.setBounds(520, 244, 12, 162);
+		separator_1.setBounds(520, 197, 12, 162);
 		frame.getContentPane().add(separator_1);
 		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setOrientation(SwingConstants.VERTICAL);
-		separator_2.setBounds(520, 457, 12, 162);
+		separator_2.setBounds(520, 421, 12, 162);
 		frame.getContentPane().add(separator_2);
 		
 		final JLabel lblNewLabel_1 = new JLabel("Optimal Temperature for house heating");
@@ -149,7 +149,7 @@ public class Ideas {
 			}
 		});
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		lblNewLabel_1.setBounds(66, 250, 343, 27);
+		lblNewLabel_1.setBounds(66, 197, 343, 27);
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		final JTextPane txtpnIThinkThe = new JTextPane();
@@ -161,17 +161,17 @@ public class Ideas {
 			}
 		});
 		txtpnIThinkThe.setText("I think the optimal temperature for house heating is 23, because we can save a lot of energy in this way.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
-		txtpnIThinkThe.setBounds(126, 295, 319, 111);
+		txtpnIThinkThe.setBounds(126, 242, 319, 111);
 		frame.getContentPane().add(txtpnIThinkThe);
 		
 		final JTextPane txtpnWeShouldLeave = new JTextPane();
 		txtpnWeShouldLeave.setText("We should leave our lights off when we leave our apartment.\n\n\t\t   \n\t\t  \n\t\t  Edited Nov 1 at 13:36 ");
-		txtpnWeShouldLeave.setBounds(125, 523, 319, 107);
+		txtpnWeShouldLeave.setBounds(126, 468, 319, 107);
 		frame.getContentPane().add(txtpnWeShouldLeave);
 		
 		final JLabel lblSuggestionForEnegy = new JLabel("Suggestion for enegy saving");
 		lblSuggestionForEnegy.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		lblSuggestionForEnegy.setBounds(60, 476, 319, 27);
+		lblSuggestionForEnegy.setBounds(61, 421, 319, 27);
 		frame.getContentPane().add(lblSuggestionForEnegy);
 		
 		final JLabel label_1 = new JLabel("");
@@ -190,7 +190,7 @@ public class Ideas {
 			}
 		});
 		label_1.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Picachu.png")));
-		label_1.setBounds(612, 290, 103, 101);
+		label_1.setBounds(612, 237, 103, 101);
 		frame.getContentPane().add(label_1);
 		
 		JLabel lblPatrick = new JLabel("Patrick");
@@ -203,31 +203,31 @@ public class Ideas {
 		});
 		lblPatrick.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPatrick.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblPatrick.setBounds(632, 262, 61, 16);
+		lblPatrick.setBounds(632, 209, 61, 16);
 		frame.getContentPane().add(lblPatrick);
 		
 		JTextPane txtpnRank = new JTextPane();
 		txtpnRank.setText("Rank  \n\n90%");
-		txtpnRank.setBounds(554, 325, 45, 66);
+		txtpnRank.setBounds(554, 272, 45, 66);
 		frame.getContentPane().add(txtpnRank);
 		
 		JLabel label_4 = new JLabel("");
 		label_4.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Turtle.png")));
-		label_4.setBounds(612, 493, 114, 115);
+		label_4.setBounds(602, 447, 114, 115);
 		frame.getContentPane().add(label_4);
 		
 		JLabel lblKatherine = new JLabel("Katherine");
 		lblKatherine.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblKatherine.setBounds(628, 467, 81, 16);
+		lblKatherine.setBounds(618, 421, 81, 16);
 		frame.getContentPane().add(lblKatherine);
 		
 		JTextPane txtpnRank_1 = new JTextPane();
 		txtpnRank_1.setText("Rank  \n\n75%");
-		txtpnRank_1.setBounds(554, 532, 45, 66);
+		txtpnRank_1.setBounds(544, 486, 45, 66);
 		frame.getContentPane().add(txtpnRank_1);
 		
 		JButton btnNewest = new JButton("Newest");
-		btnNewest.setBounds(222, 126, 117, 29);
+		btnNewest.setBounds(220, 95, 117, 29);
 		frame.getContentPane().add(btnNewest);
 		
 		JButton btnTopMonthly = new JButton("Top Monthly");
@@ -248,11 +248,11 @@ public class Ideas {
 				
 			}
 		});
-		btnTopMonthly.setBounds(363, 126, 117, 29);
+		btnTopMonthly.setBounds(361, 95, 117, 29);
 		frame.getContentPane().add(btnTopMonthly);
 		
 		JButton btnTopYearly = new JButton("Top Yearly\r\n");
-		btnTopYearly.setBounds(515, 126, 117, 29);
+		btnTopYearly.setBounds(513, 95, 117, 29);
 		frame.getContentPane().add(btnTopYearly);
 		
 		JLabel label_7 = new JLabel("Overview");
@@ -269,7 +269,7 @@ public class Ideas {
 		label_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_7.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_7.setBackground(new Color(0, 204, 204));
-		label_7.setBounds(222, 40, 86, 29);
+		label_7.setBounds(251, 14, 86, 29);
 		frame.getContentPane().add(label_7);
 		
 		JLabel lblIdeaCompetition = new JLabel("Idea Competition");
@@ -279,7 +279,7 @@ public class Ideas {
 		lblIdeaCompetition.setHorizontalAlignment(SwingConstants.CENTER);
 		lblIdeaCompetition.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblIdeaCompetition.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblIdeaCompetition.setBounds(484, 40, 134, 29);
+		lblIdeaCompetition.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeaCompetition);
 		
 		JLabel label_9 = new JLabel("Comparison");
@@ -289,19 +289,25 @@ public class Ideas {
 		label_9.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_9.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_9.setBackground(new Color(0, 204, 204));
-		label_9.setBounds(359, 40, 86, 29);
+		label_9.setBounds(440, 14, 86, 29);
 		frame.getContentPane().add(label_9);
 		
-		JLabel label_10 = new JLabel("UBC Energy Dashboard");
-		label_10.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label_10.setBorder(new LineBorder(new Color(0, 0, 0)));
-		label_10.setBounds(10, 40, 174, 29);
-		frame.getContentPane().add(label_10);
+		JLabel lblBulbIcon = new JLabel("");
+		lblBulbIcon.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/bulb.png")));
+		lblBulbIcon.setBounds(12, 11, 35, 33);
+		frame.getContentPane().add(lblBulbIcon);
+		
+		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
+		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setBorder(null);
+		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
+		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(null);
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(10, 95, 174, 141);
+		panel.setBounds(12, 54, 174, 115);
 		frame.getContentPane().add(panel);
 		
 		JLabel label_12 = new JLabel("");

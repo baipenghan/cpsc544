@@ -100,10 +100,16 @@ public class PrivateDashboard {
 		label_1.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/weather.png")));
 		panel_5.add(label_1);
 		
+		JLabel lblBulbIcon = new JLabel("");
+		lblBulbIcon.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/bulb.png")));
+		lblBulbIcon.setBounds(12, 11, 35, 33);
+		frame.getContentPane().add(lblBulbIcon);
+		
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblUbcEnergyDashboard.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblUbcEnergyDashboard.setBounds(10, 14, 174, 29);
+		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setBorder(null);
+		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JPanel panel = new JPanel();
