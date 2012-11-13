@@ -100,9 +100,9 @@ public class PrivateDashboard {
 		
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
 		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblUbcEnergyDashboard.setBorder(null);
-		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
+		lblUbcEnergyDashboard.setBounds(49, 15, 229, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JPanel panel = new JPanel();
@@ -118,21 +118,21 @@ public class PrivateDashboard {
 		lblCumulative.setBorder(null);
 		panel.add(lblCumulative);
 		
-		JLabel lblK = new JLabel("176,000 kWH");
+		JLabel lblK = new JLabel("5,891 kWH");
 		lblK.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
 		lblK.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblK.setBorder(null);
 		lblK.setBounds(10, 32, 144, 31);
 		panel.add(lblK);
 		
-		JLabel lblCo = new JLabel("20,735 CO2");
+		JLabel lblCo = new JLabel("735 CO2");
 		lblCo.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/COs.jpg")));
 		lblCo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCo.setBorder(null);
 		lblCo.setBounds(10, 67, 144, 31);
 		panel.add(lblCo);
 		
-		JLabel label_2 = new JLabel("3,601.25");
+		JLabel label_2 = new JLabel("160.25");
 		label_2.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Dollar_Symbol.gif")));
 		label_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_2.setBorder(null);
@@ -145,12 +145,12 @@ public class PrivateDashboard {
 		lblLastMonth.setBounds(10, 139, 89, 26);
 		panel.add(lblLastMonth);
 		
-		JLabel label_3 = new JLabel("176,000 kWH");
-		label_3.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
-		label_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		label_3.setBorder(null);
-		label_3.setBounds(10, 176, 144, 31);
-		panel.add(label_3);
+		JLabel lblKwh = new JLabel("5,572 kWH");
+		lblKwh.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
+		lblKwh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblKwh.setBorder(null);
+		lblKwh.setBounds(10, 176, 144, 31);
+		panel.add(lblKwh);
 		
 		JLabel label_4 = new JLabel("5.4%");
 		label_4.setForeground(new Color(0, 204, 0));
@@ -181,7 +181,7 @@ public class PrivateDashboard {
 		lblOverview.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOverview.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblOverview.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblOverview.setBounds(251, 14, 86, 29);
+		lblOverview.setBounds(337, 15, 86, 29);
 		frame.getContentPane().add(lblOverview);
 		
 		JLabel lblComparison = new JLabel("Comparison");
@@ -199,7 +199,7 @@ public class PrivateDashboard {
 		lblComparison.setHorizontalAlignment(SwingConstants.CENTER);
 		lblComparison.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblComparison.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblComparison.setBounds(440, 14, 86, 29);
+		lblComparison.setBounds(484, 15, 86, 29);
 		frame.getContentPane().add(lblComparison);
 		
 		JLabel lblIdeas = new JLabel("Idea Competition");
@@ -232,8 +232,10 @@ public class PrivateDashboard {
 		panel_Units.add(lblUnits);
 		
 		final JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		radioButton_1.setEnabled(false);
 		final JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
 		final JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		radioButton_2.setEnabled(false);
 		radioButton_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {

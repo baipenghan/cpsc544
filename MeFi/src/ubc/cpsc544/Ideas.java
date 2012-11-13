@@ -343,7 +343,7 @@ public class Ideas {
 		label_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_7.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_7.setBackground(new Color(0, 204, 204));
-		label_7.setBounds(251, 14, 86, 29);
+		label_7.setBounds(337, 15, 86, 29);
 		frame.getContentPane().add(label_7);
 		
 		JLabel lblIdeaCompetition = new JLabel("Idea Competition");
@@ -370,7 +370,7 @@ public class Ideas {
 		label_9.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_9.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_9.setBackground(new Color(0, 204, 204));
-		label_9.setBounds(440, 14, 86, 29);
+		label_9.setBounds(484, 15, 86, 29);
 		frame.getContentPane().add(label_9);
 		
 		JLabel lblBulbIcon = new JLabel("");
@@ -380,9 +380,9 @@ public class Ideas {
 		
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
 		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblUbcEnergyDashboard.setBorder(null);
-		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
+		lblUbcEnergyDashboard.setBounds(49, 15, 229, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
 		
 		JPanel panel = new JPanel();

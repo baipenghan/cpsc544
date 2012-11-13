@@ -54,7 +54,7 @@ public class Comparison {
 		label_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_7.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_7.setBackground(new Color(0, 204, 204));
-		label_7.setBounds(251, 14, 86, 29);
+		label_7.setBounds(337, 15, 86, 29);
 		frame.getContentPane().add(label_7);
 
 		JLabel lblIdeaCompetition = new JLabel("Idea Competition");
@@ -81,7 +81,7 @@ public class Comparison {
 		label_9.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		label_9.setBorder(new LineBorder(new Color(0, 0, 0)));
 		label_9.setBackground(Color.ORANGE);
-		label_9.setBounds(440, 14, 86, 29);
+		label_9.setBounds(484, 15, 86, 29);
 		frame.getContentPane().add(label_9);
 
 		JLabel lblBulbIcon = new JLabel("");
@@ -91,9 +91,9 @@ public class Comparison {
 
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
 		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lblUbcEnergyDashboard.setBorder(null);
-		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
+		lblUbcEnergyDashboard.setBounds(49, 15, 229, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
 
 		JLabel lblNewLabel = new JLabel("");
@@ -102,19 +102,22 @@ public class Comparison {
 		frame.getContentPane().add(lblNewLabel);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Apartment", "301", "302", "305" }));
+		comboBox.setEnabled(false);
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Apartments", "301", "302", "305"}));
 		comboBox.setToolTipText("");
-		comboBox.setBounds(40, 219, 122, 27);
+		comboBox.setBounds(12, 219, 172, 27);
 		frame.getContentPane().add(comboBox);
 
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] { "Floors", "2", "3", "4" }));
-		comboBox_1.setBounds(40, 258, 122, 27);
+		comboBox_1.setEnabled(false);
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Floors", "2", "3", "4"}));
+		comboBox_1.setBounds(12, 258, 172, 27);
 		frame.getContentPane().add(comboBox_1);
 
 		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setModel(new DefaultComboBoxModel(new String[] { "Building", "St. John's" }));
-		comboBox_2.setBounds(40, 297, 122, 27);
+		comboBox_2.setEnabled(false);
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Buildings", "St. John's"}));
+		comboBox_2.setBounds(12, 297, 172, 27);
 		frame.getContentPane().add(comboBox_2);
 
 		JPanel panel_Units = new JPanel();
@@ -131,7 +134,9 @@ public class Comparison {
 
 		final JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
 		final JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		radioButton_2.setEnabled(false);
 		final JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		radioButton_1.setEnabled(false);
 		radioButton_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseReleased(MouseEvent e) {
@@ -181,11 +186,13 @@ public class Comparison {
 		frame.getContentPane().add(lblApplianceChart);
 
 		JCheckBox chckbxDaily = new JCheckBox("Daily");
+		chckbxDaily.setEnabled(false);
 		chckbxDaily.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		chckbxDaily.setBounds(633, 539, 128, 23);
 		frame.getContentPane().add(chckbxDaily);
 
 		JCheckBox chckbxWeekly = new JCheckBox("Weekly");
+		chckbxWeekly.setEnabled(false);
 		chckbxWeekly.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		chckbxWeekly.setBounds(633, 571, 128, 23);
 		frame.getContentPane().add(chckbxWeekly);
@@ -226,6 +233,7 @@ public class Comparison {
 		frame.getContentPane().add(label_2);
 
 		JCheckBox chckbxMonthly = new JCheckBox("Monthly");
+		chckbxMonthly.setEnabled(false);
 		chckbxMonthly.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		chckbxMonthly.setBounds(633, 605, 128, 23);
 		frame.getContentPane().add(chckbxMonthly);
