@@ -16,10 +16,12 @@ import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Ideas {
 
 	private JFrame frame;
+	private JTextField txtSearch;
 
 	/**
 	 * Launch the application.
@@ -139,7 +141,7 @@ public class Ideas {
 		separator_2.setBounds(520, 421, 12, 162);
 		frame.getContentPane().add(separator_2);
 		
-		final JLabel lblNewLabel_1 = new JLabel("Optimal Temperature for house heating");
+		final JLabel lblNewLabel_1 = new JLabel("Optimal Thermostat setting");
 		lblNewLabel_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblNewLabel_1.addMouseListener(new MouseAdapter() {
 			@Override
@@ -160,16 +162,16 @@ public class Ideas {
 				com.setVisible(true);
 			}
 		});
-		txtpnIThinkThe.setText("I think the optimal temperature for house heating is 23, because we can save a lot of energy in this way.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
+		txtpnIThinkThe.setText("Lower your thermostat by 4 - 5 degrees Celsius (7 - 9 degrees Fahrenheit) while you're sleeping at night and when no one is at home.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
 		txtpnIThinkThe.setBounds(126, 242, 319, 111);
 		frame.getContentPane().add(txtpnIThinkThe);
 		
 		final JTextPane txtpnWeShouldLeave = new JTextPane();
-		txtpnWeShouldLeave.setText("We should leave our lights off when we leave our apartment.\n\n\t\t   \n\t\t  \n\t\t  Edited Nov 1 at 13:36 ");
+		txtpnWeShouldLeave.setText("Switch to cold when doing your laundry. 85 – 90% of the energy used to wash your clothes is used to heat the water.\n\n\t\t   \n\t\t  Edited Nov 1 at 13:36 ");
 		txtpnWeShouldLeave.setBounds(126, 468, 319, 107);
 		frame.getContentPane().add(txtpnWeShouldLeave);
 		
-		final JLabel lblSuggestionForEnegy = new JLabel("Suggestion for enegy saving");
+		final JLabel lblSuggestionForEnegy = new JLabel("Use cold water for Laundary");
 		lblSuggestionForEnegy.setFont(new Font("Lucida Grande", Font.BOLD, 16));
 		lblSuggestionForEnegy.setBounds(61, 421, 319, 27);
 		frame.getContentPane().add(lblSuggestionForEnegy);
@@ -405,6 +407,14 @@ public class Ideas {
 		lblProposeIdea.setBackground(new Color(0, 204, 102));
 		lblProposeIdea.setBounds(745, 93, 133, 29);
 		frame.getContentPane().add(lblProposeIdea);
+		
+		txtSearch = new JTextField();
+		txtSearch.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtSearch.setText("Search");
+		txtSearch.setForeground(Color.LIGHT_GRAY);
+		txtSearch.setBounds(870, 14, 115, 29);
+		frame.getContentPane().add(txtSearch);
+		txtSearch.setColumns(10);
 		
 		
 	}
