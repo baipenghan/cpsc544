@@ -128,18 +128,45 @@ public class Comparison {
 		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
 		panel_Units.add(lblUnits);
 		
-		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		final JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		final JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		final JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		radioButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(false);
+				radioButton_1.setSelected(false);
+				radioButton_2.setSelected(true);
+			}
+		});
+		
+		radioButton_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(false);
+				radioButton_1.setSelected(true);
+				radioButton_2.setSelected(false);
+			}
+		});
+		radioButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				radioButton.setSelected(true);
+				radioButton_1.setSelected(false);
+				radioButton_2.setSelected(false);
+			}
+		});
 		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		radioButton.setBackground(Color.WHITE);
 		radioButton.setSelected(true);
 		panel_Units.add(radioButton);
 		
-		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		
 		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		radioButton_1.setBackground(Color.WHITE);
 		panel_Units.add(radioButton_1);
 		
-		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+	
 		radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		radioButton_2.setBackground(Color.WHITE);
 		panel_Units.add(radioButton_2);
