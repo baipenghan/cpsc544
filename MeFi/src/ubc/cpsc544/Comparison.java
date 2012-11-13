@@ -23,6 +23,8 @@ import javax.swing.JRadioButton;
 import java.awt.FlowLayout;
 import javax.swing.JCheckBox;
 
+import org.jfree.chart.ChartPanel;
+
 public class Comparison {
 	
 	private JFrame frame;
@@ -197,10 +199,18 @@ public class Comparison {
 		lblCustomDurastion.setBounds(638, 513, 123, 16);
 		frame.getContentPane().add(lblCustomDurastion);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(247, 100, 514, 387);
-		frame.getContentPane().add(panel_1);
+		JPanel panel_MainChartPanel = new JPanel();
+		panel_MainChartPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_MainChartPanel.setBackground(Color.WHITE);
+		panel_MainChartPanel.setBounds(247, 100, 514, 387);
+		frame.getContentPane().add(panel_MainChartPanel);
+		panel_MainChartPanel.setLayout(null);
+		
+		LineChart lineChart = new LineChart();
+		ChartPanel chartPanel = lineChart.getChartPanel();
+		chartPanel.setVisible(true);
+		chartPanel.setBounds(0, 0, 517, 436);
+		panel_MainChartPanel.add(chartPanel);
 		
 		final JButton btnNewButton = new JButton("Add\n");
 		btnNewButton.addMouseListener(new MouseAdapter() {
