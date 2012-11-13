@@ -116,26 +116,33 @@ public class Comparison {
 		comboBox_2.setBounds(40, 297, 122, 27);
 		frame.getContentPane().add(comboBox_2);
 		
-		JPanel panel = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) panel.getLayout();
-		flowLayout.setAlignment(FlowLayout.LEFT);
-		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel.setBackground(Color.WHITE);
-		panel.setBounds(10, 349, 174, 141);
-		frame.getContentPane().add(panel);
+		JPanel panel_Units = new JPanel();
+		FlowLayout fl_panel_Units = (FlowLayout) panel_Units.getLayout();
+		fl_panel_Units.setAlignment(FlowLayout.LEFT);
+		panel_Units.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_Units.setBackground(Color.WHITE);
+		panel_Units.setBounds(10, 349, 174, 141);
+		frame.getContentPane().add(panel_Units);
 		
-		JLabel label = new JLabel("Units:");
-		panel.add(label);
+		JLabel lblUnits = new JLabel("Units");
+		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_Units.add(lblUnits);
 		
 		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton.setBackground(Color.WHITE);
 		radioButton.setSelected(true);
-		panel.add(radioButton);
+		panel_Units.add(radioButton);
 		
 		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
-		panel.add(radioButton_1);
+		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_1.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_1);
 		
 		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
-		panel.add(radioButton_2);
+		radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_2.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_2);
 		
 		JLabel label_1 = new JLabel("");
 		label_1.setIcon(new ImageIcon(Comparison.class.getResource("/ubc/cpsc544/List.png")));
