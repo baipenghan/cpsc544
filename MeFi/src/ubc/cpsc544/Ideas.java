@@ -67,7 +67,7 @@ public class Ideas {
 		
 		final JLabel label_6 = new JLabel("-2");
 		label_6.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_6.setBounds(69, 492, 55, 43);
+		label_6.setBounds(60, 493, 55, 43);
 		frame.getContentPane().add(label_6);
 		
 		final JLabel lblNewLabel = new JLabel("");
