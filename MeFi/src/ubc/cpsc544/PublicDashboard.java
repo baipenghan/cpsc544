@@ -1,5 +1,6 @@
 package ubc.cpsc544;
 
+
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -18,6 +19,9 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import javax.swing.JRadioButton;
 import java.awt.FlowLayout;
+import javax.swing.JSeparator;
+
+import org.jfree.chart.ChartPanel;
 
 public class PublicDashboard {
 
@@ -30,7 +34,9 @@ public class PublicDashboard {
 	 */
 	public static void main(String[] args) {
 		try {
-		    UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+//		    UIManager.setLookAndFeel("com.seaglasslookandfeel.SeaGlassLookAndFeel");
+//			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		    UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
 		} catch (Exception e) {
 		    e.printStackTrace();
 		}
@@ -92,36 +98,51 @@ public class PublicDashboard {
 		lblForgotPassword.setBounds(895, 44, 102, 14);
 		frame.getContentPane().add(lblForgotPassword);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(194, 69, 517, 436);
-		frame.getContentPane().add(panel_1);
+		JPanel panel_MainChartPanel = new JPanel();
+		panel_MainChartPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_MainChartPanel.setBackground(Color.WHITE);
+		panel_MainChartPanel.setBounds(194, 69, 517, 436);
+		frame.getContentPane().add(panel_MainChartPanel);
+		panel_MainChartPanel.setLayout(null);
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/3DBuildingView.png")));
-		panel_1.add(label);
+//		JLabel label = new JLabel("");
+//		label.setBounds(0, 0, 67, 57);
+//		label.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/3DBuildingView.png")));
+//		panel_MainChartPanel.add(label);
 		
-		JPanel panel_3 = new JPanel();
-		FlowLayout flowLayout = (FlowLayout) panel_3.getLayout();
-		flowLayout.setAlignment(FlowLayout.LEFT);
-		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_3.setBackground(Color.WHITE);
-		panel_3.setBounds(10, 364, 174, 141);
-		frame.getContentPane().add(panel_3);
+		BarChart barChart = new BarChart();
+		ChartPanel chartPanel = barChart.getChartPanel();
+		chartPanel.setVisible(true);
+		chartPanel.setBounds(0, 0, 517, 436);
+		panel_MainChartPanel.add(chartPanel);
 		
-		JLabel label_5 = new JLabel("Units:");
-		panel_3.add(label_5);
+		JPanel panel_Units = new JPanel();
+		FlowLayout fl_panel_Units = (FlowLayout) panel_Units.getLayout();
+		fl_panel_Units.setAlignment(FlowLayout.LEFT);
+		panel_Units.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_Units.setBackground(Color.WHITE);
+		panel_Units.setBounds(10, 364, 174, 141);
+		frame.getContentPane().add(panel_Units);
+		
+		JLabel lblUnits = new JLabel("Units");
+		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_Units.add(lblUnits);
 		
 		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton.setBackground(Color.WHITE);
 		radioButton.setSelected(true);
-		panel_3.add(radioButton);
+		panel_Units.add(radioButton);
 		
 		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
-		panel_3.add(radioButton_1);
+		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_1.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_1);
 		
 		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
-		panel_3.add(radioButton_2);
+		radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_2.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_2);
 		
 		JPanel panel_4 = new JPanel();
 		FlowLayout flowLayout_1 = (FlowLayout) panel_4.getLayout();
@@ -130,6 +151,13 @@ public class PublicDashboard {
 		panel_4.setBackground(Color.WHITE);
 		panel_4.setBounds(10, 521, 701, 185);
 		frame.getContentPane().add(panel_4);
+		panel_4.setLayout(null);
+		
+		JTextPane txtpnFloors = new JTextPane();
+		txtpnFloors.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtpnFloors.setText("Floors:  05\r\nOccupants:  120\r\r\nSt. John\u2019s College is UBC\u2019s international graduate college. A magnet for international and multicultural exchange, the College offers an academic setting that encourages discussion, debate and cultural expression, all enlivened by the participation of resident graduate students who come from diverse cultural backgrounds.");
+		txtpnFloors.setBounds(12, 12, 666, 134);
+		panel_4.add(txtpnFloors);
 		
 		JTextPane txtpnNoFloors = new JTextPane();
 		txtpnNoFloors.setFont(new Font("Helvetica", Font.PLAIN, 15));
@@ -139,35 +167,24 @@ public class PublicDashboard {
 		JPanel panel_5 = new JPanel();
 		panel_5.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_5.setBackground(Color.WHITE);
-		panel_5.setBounds(721, 525, 276, 181);
+		panel_5.setBounds(721, 521, 276, 185);
 		frame.getContentPane().add(panel_5);
 		
 		JLabel label_1 = new JLabel("");
 		label_1.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/weather.png")));
 		panel_5.add(label_1);
 		
-		JLabel lblTopIdeas = new JLabel("Top Ideas");
-		lblTopIdeas.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblTopIdeas.setBounds(721, 69, 112, 29);
-		lblTopIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
-		frame.getContentPane().add(lblTopIdeas);
+		JLabel lblBulbIcon = new JLabel("");
+		lblBulbIcon.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/bulb.png")));
+		lblBulbIcon.setBounds(12, 11, 35, 33);
+		frame.getContentPane().add(lblBulbIcon);
 		
 		JLabel lblUbcEnergyDashboard = new JLabel("UBC Energy Dashboard");
-		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblUbcEnergyDashboard.setBorder(new LineBorder(new Color(0, 0, 0)));
-		lblUbcEnergyDashboard.setBounds(10, 14, 174, 29);
+		lblUbcEnergyDashboard.setForeground(new Color(0, 128, 0));
+		lblUbcEnergyDashboard.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblUbcEnergyDashboard.setBorder(null);
+		lblUbcEnergyDashboard.setBounds(49, 15, 174, 29);
 		frame.getContentPane().add(lblUbcEnergyDashboard);
-		
-		JTextPane txtpnIdeas = new JTextPane();
-		txtpnIdeas.setEditable(false);
-		txtpnIdeas.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtpnIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
-		txtpnIdeas.setMargin(new Insets(30, 30, 30, 30));
-		txtpnIdeas.setText("1. Lower your thermostat by 4 - 5 degrees Celsius (7 - 9 degrees Fahrenheit) while you're sleeping at night and when no one is at home. \n\n " +
-				"2. Switch to cold when doing your laundry. 85 – 90% of the energy used to wash your clothes is used to heat the water. \n\n " +
-				"3. Try setting your dishwasher to start after 7:00 p.m. when off-peak prices begin. ");
-		txtpnIdeas.setBounds(721, 108, 276, 397);
-		frame.getContentPane().add(txtpnIdeas);
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 69, 174, 284);
@@ -178,7 +195,7 @@ public class PublicDashboard {
 		
 		JLabel lblCumulative = new JLabel("Cumulative");
 		lblCumulative.setBounds(10, 5, 89, 26);
-		lblCumulative.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCumulative.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblCumulative.setBorder(null);
 		panel.add(lblCumulative);
 		
@@ -223,6 +240,34 @@ public class PublicDashboard {
 		label_4.setBorder(null);
 		label_4.setBounds(10, 224, 144, 31);
 		panel.add(label_4);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(10, 133, 152, 2);
+		panel.add(separator);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_2.setBackground(Color.WHITE);
+		panel_2.setBounds(723, 71, 274, 434);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(null);
+		
+		JTextPane txtpnIdeas = new JTextPane();
+		txtpnIdeas.setBounds(12, 55, 259, 339);
+		panel_2.add(txtpnIdeas);
+		txtpnIdeas.setEditable(false);
+		txtpnIdeas.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtpnIdeas.setBorder(null);
+		txtpnIdeas.setMargin(new Insets(30, 30, 30, 30));
+		txtpnIdeas.setText("1. Lower your thermostat by 4 - 5 degrees Celsius (7 - 9 degrees Fahrenheit) while you're sleeping at night and when no one is at home. \n\n " +
+				"2. Switch to cold when doing your laundry. 85 – 90% of the energy used to wash your clothes is used to heat the water. \n\n " +
+				"3. Try setting your dishwasher to start after 7:00 p.m. when off-peak prices begin. ");
+		
+		JLabel lblTopIdeas = new JLabel("Top Ideas");
+		lblTopIdeas.setBounds(12, 13, 112, 29);
+		panel_2.add(lblTopIdeas);
+		lblTopIdeas.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblTopIdeas.setBorder(null);
 	
 		
 	}
