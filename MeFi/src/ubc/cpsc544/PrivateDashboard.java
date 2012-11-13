@@ -15,6 +15,12 @@ import javax.swing.JRadioButton;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+import javax.swing.JCheckBox;
+import javax.swing.JTabbedPane;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
+import javax.swing.JSlider;
+import javax.swing.JMenuBar;
 
 public class PrivateDashboard {
 
@@ -53,15 +59,17 @@ public class PrivateDashboard {
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(194, 69, 585, 438);
-		frame.getContentPane().add(panel_1);
-		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/3DApartmentView.png")));
-		panel_1.add(label);
+//		JPanel panel_1 = new JPanel();
+//		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+//		panel_1.setBackground(Color.WHITE);
+//		panel_1.setBounds(194, 69, 585, 438);
+//		frame.getContentPane().add(panel_1);
+//		panel_1.setLayout(null);
+//		
+//		JLabel label = new JLabel("");
+//		label.setBounds(0, 0, 580, 394);
+//		label.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/3DApartmentView.png")));
+//		panel_1.add(label);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(null);
@@ -219,13 +227,46 @@ public class PrivateDashboard {
 		lblIdeas.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeas);
 		
+		final JLabel label_chart = new JLabel("");
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT);
+		tabbedPane.setBorder(null);
+		tabbedPane.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		tabbedPane.setBounds(194, 69, 785, 438);
+		frame.getContentPane().add(tabbedPane);
+		
+		JPanel panel_apartment = new JPanel();
+		panel_apartment.setBorder(null);
+		panel_apartment.setBackground(Color.WHITE);
+		panel_apartment.setLayout(null);
+		tabbedPane.addTab("Apartment", null, panel_apartment, null);
+		
+		label_chart.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/3D-Apartment-view-without-nodes.png")));
+		label_chart.setBounds(0, 0, 499, 401);
+		panel_apartment.add(label_chart);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/month-strip.png")));
+		label.setBounds(0, 412, 499, 21);
+		panel_apartment.add(label);
+		
+		JLabel label_3 = new JLabel("");
+		label_3.setBounds(512, 11, 74, 74);
+		panel_apartment.add(label_3);
+		label_3.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/pan.png")));
+		
+		JSlider slider = new JSlider();
+		slider.setBounds(648, 11, 28, 65);
+		panel_apartment.add(slider);
+		slider.setOrientation(SwingConstants.VERTICAL);
+		
 		JPanel panel_Units = new JPanel();
+		panel_Units.setBounds(512, 260, 174, 141);
+		panel_apartment.add(panel_Units);
 		FlowLayout fl_panel_Units = (FlowLayout) panel_Units.getLayout();
 		fl_panel_Units.setAlignment(FlowLayout.LEFT);
 		panel_Units.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_Units.setBackground(Color.WHITE);
-		panel_Units.setBounds(791, 69, 174, 141);
-		frame.getContentPane().add(panel_Units);
 		
 		JLabel lblUnits = new JLabel("Units");
 		lblUnits.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -244,39 +285,84 @@ public class PrivateDashboard {
 				radioButton.setSelected(false);
 			}
 		});
-	
-		radioButton_1.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				radioButton_1.setSelected(true);
-				radioButton_2.setSelected(false);
-				radioButton.setSelected(false);
-			}
-		});
 		
+			radioButton_1.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					radioButton_1.setSelected(true);
+					radioButton_2.setSelected(false);
+					radioButton.setSelected(false);
+				}
+			});
+			
+			
+			radioButton.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseReleased(MouseEvent e) {
+					radioButton_1.setSelected(false);
+					radioButton_2.setSelected(false);
+					radioButton.setSelected(true);
+				}
+			});
+			radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			radioButton.setBackground(Color.WHITE);
+			radioButton.setSelected(true);
+			panel_Units.add(radioButton);
+			
+			
+			radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			radioButton_1.setBackground(Color.WHITE);
+			panel_Units.add(radioButton_1);
+			
+			
+			radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			radioButton_2.setBackground(Color.WHITE);
+			panel_Units.add(radioButton_2);
+			
+			JPanel panel_1 = new JPanel();
+			panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+			panel_1.setBackground(Color.WHITE);
+			panel_1.setBounds(512, 162, 174, 87);
+			panel_apartment.add(panel_1);
+			panel_1.setLayout(null);
+			
+			JCheckBox chckbxHeating = new JCheckBox("Heating");
+			chckbxHeating.setBounds(6, 59, 97, 23);
+			panel_1.add(chckbxHeating);
+			chckbxHeating.setEnabled(false);
+			chckbxHeating.setBackground(Color.WHITE);
+			chckbxHeating.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			final JCheckBox chckbxLights = new JCheckBox("Lights");
+			final JCheckBox chckbxPlugLoad = new JCheckBox("Plug load");
+			chckbxLights.setBounds(6, 33, 97, 23);
+			panel_1.add(chckbxLights);
+			chckbxLights.addChangeListener(new ChangeListener() {
+				public void stateChanged(ChangeEvent e) {
+					updateChart(chckbxPlugLoad, chckbxLights, label_chart);
+				}
+			});
+			
+			chckbxLights.setBackground(Color.WHITE);
+			chckbxLights.setFont(new Font("Tahoma", Font.PLAIN, 14));
+			chckbxPlugLoad.setBounds(6, 7, 97, 23);
+			panel_1.add(chckbxPlugLoad);
+			
+			chckbxPlugLoad.addChangeListener(new ChangeListener() {
+				public void stateChanged(ChangeEvent e) {
+					updateChart(chckbxPlugLoad, chckbxLights, label_chart);
+				}
+			});
+			chckbxPlugLoad.setBackground(Color.WHITE);
+			chckbxPlugLoad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		
-		radioButton.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				radioButton_1.setSelected(false);
-				radioButton_2.setSelected(false);
-				radioButton.setSelected(true);
-			}
-		});
-		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		radioButton.setBackground(Color.WHITE);
-		radioButton.setSelected(true);
-		panel_Units.add(radioButton);
+		JPanel panel_floor = new JPanel();
+		panel_floor.setBorder(null);
+		tabbedPane.addTab("Floor", null, panel_floor, null);
 		
+		JPanel panel_Building = new JPanel();
+		panel_Building.setBorder(null);
+		tabbedPane.addTab("Building", null, panel_Building, null);
 		
-		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		radioButton_1.setBackground(Color.WHITE);
-		panel_Units.add(radioButton_1);
-		
-		
-		radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		radioButton_2.setBackground(Color.WHITE);
-		panel_Units.add(radioButton_2);
 	
 		
 	}
@@ -287,5 +373,23 @@ public class PrivateDashboard {
 
 	public void setFrame(JFrame frame) {
 		this.frame = frame;
+	}
+
+	private void updateChart(final JCheckBox chckbxPlugLoad, final JCheckBox chckbxLights, final JLabel label_chart) {
+		boolean plugLoad = chckbxPlugLoad.isSelected();
+		boolean lights = chckbxLights.isSelected();
+		
+		String imgPath;
+		if(!plugLoad && !lights) {
+			imgPath="/ubc/cpsc544/3D-Apartment-view-without-nodes.png";
+		} else if(!plugLoad && lights) {
+			imgPath="/ubc/cpsc544/3D-Apartment-view-bulb-nodes.png";
+		} else if(plugLoad && !lights) {
+			imgPath="/ubc/cpsc544/3D-Apartment-view-plug-nodes.png";
+		} else{
+			imgPath="/ubc/cpsc544/3D-Apartment-view-both-nodes.png";
+		}
+		label_chart.setIcon(new ImageIcon(PrivateDashboard.class.getResource(imgPath)));
+		label_chart.repaint();
 	}
 }
