@@ -73,7 +73,10 @@ public class Ideas {
 			
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_5.setText(Integer.toString(Integer.parseInt(label_5.getText()) + 1));
+				if (label_5.getText().equals("3"))
+					label_5.setText(Integer.toString(4));
+				else
+				label_5.setText(Integer.toString(5));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -88,7 +91,10 @@ public class Ideas {
 		label_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				label_5.setText(Integer.toString(Integer.parseInt(label_5.getText()) - 1));
+				if (label_5.getText().equals("5"))
+					label_5.setText(Integer.toString(4));
+				else
+				label_5.setText(Integer.toString(3));
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
