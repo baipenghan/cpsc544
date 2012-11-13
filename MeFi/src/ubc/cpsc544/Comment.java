@@ -102,14 +102,14 @@ public class Comment extends JFrame {
 		label_9.setBounds(440, 14, 86, 29);
 		contentPane.add(label_9);
 		
-		JLabel label = new JLabel("Optimal Temperature for house heating");
+		JLabel label = new JLabel("Optimal Thermostat setting");
 		label.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		label.setBounds(69, 150, 343, 27);
+		label.setBounds(68, 84, 343, 27);
 		contentPane.add(label);
 		
 		final JLabel label_2 = new JLabel("4");
 		label_2.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
-		label_2.setBounds(79, 221, 59, 43);
+		label_2.setBounds(78, 155, 59, 43);
 		contentPane.add(label_2);
 		
 		final JLabel label_1 = new JLabel("");
@@ -124,7 +124,7 @@ public class Comment extends JFrame {
 			}
 		});
 		label_1.setIcon(new ImageIcon(Comment.class.getResource("/ubc/cpsc544/UpArrow.png")));
-		label_1.setBounds(69, 205, 34, 16);
+		label_1.setBounds(68, 139, 34, 16);
 		contentPane.add(label_1);
 		
 		
@@ -141,22 +141,22 @@ public class Comment extends JFrame {
 			}
 		});
 		label_3.setIcon(new ImageIcon(Comment.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_3.setBounds(69, 265, 34, 16);
+		label_3.setBounds(68, 199, 34, 16);
 		contentPane.add(label_3);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setText("I think the optimal temperature for house heating is 23, because we can save a lot of energy in this way.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
-		textPane.setBounds(144, 201, 319, 111);
+		textPane.setText("Lower your thermostat by 4 - 5 degrees Celsius (7 - 9 degrees Fahrenheit) while you're sleeping at night and when no one is at home.\n\n\t\t   \n\t\t  Edited Oct 23 at 16:35 ");
+		textPane.setBounds(143, 135, 319, 111);
 		contentPane.add(textPane);
 		
 		final JTextArea textArea = new JTextArea();
 		textArea.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		textArea.setBounds(133, 577, 319, 82);
+		textArea.setBounds(143, 489, 319, 82);
 		contentPane.add(textArea);
 		
 		JSeparator separator = new JSeparator();
 		separator.setOrientation(SwingConstants.VERTICAL);
-		separator.setBounds(499, 196, 12, 135);
+		separator.setBounds(499, 84, 12, 135);
 		contentPane.add(separator);
 		
 		final JLabel label_4 = new JLabel("");
@@ -173,46 +173,46 @@ public class Comment extends JFrame {
 			}
 		});
 		label_4.setIcon(new ImageIcon(Comment.class.getResource("/ubc/cpsc544/Picachu.png")));
-		label_4.setBounds(594, 197, 103, 101);
+		label_4.setBounds(593, 131, 103, 101);
 		contentPane.add(label_4);
 		
 		JLabel label_5 = new JLabel("Patrick");
 		label_5.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		label_5.setBounds(618, 179, 61, 16);
+		label_5.setBounds(617, 113, 61, 16);
 		contentPane.add(label_5);
 		
 		JTextPane textPane_1 = new JTextPane();
 		textPane_1.setText("Rank  \n\n90%");
-		textPane_1.setBounds(543, 213, 45, 66);
+		textPane_1.setBounds(542, 147, 45, 66);
 		contentPane.add(textPane_1);
 		
 		JLabel lblComments = new JLabel("Comments");
 		lblComments.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		lblComments.setBounds(68, 313, 343, 27);
+		lblComments.setBounds(68, 246, 343, 27);
 		contentPane.add(lblComments);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(16, 351, 694, 12);
+		separator_1.setBounds(12, 284, 694, 12);
 		contentPane.add(separator_1);
 		
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setOrientation(SwingConstants.VERTICAL);
-		separator_2.setBounds(499, 396, 12, 101);
+		separator_2.setBounds(499, 318, 12, 101);
 		contentPane.add(separator_2);
 		
 		JLabel label_10 = new JLabel("");
 		label_10.setIcon(new ImageIcon(Comment.class.getResource("/ubc/cpsc544/Charmander.png")));
-		label_10.setBounds(591, 405, 88, 92);
+		label_10.setBounds(590, 335, 88, 92);
 		contentPane.add(label_10);
 		
 		JLabel lblBilly = new JLabel("Billy");
 		lblBilly.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblBilly.setBounds(600, 377, 61, 16);
+		lblBilly.setBounds(599, 307, 61, 16);
 		contentPane.add(lblBilly);
 		
 		JTextPane txtpnRank = new JTextPane();
 		txtpnRank.setText("Rank  \n\n40%");
-		txtpnRank.setBounds(543, 407, 45, 66);
+		txtpnRank.setBounds(542, 337, 45, 66);
 		contentPane.add(txtpnRank);
 		
 		JButton btnSubmit = new JButton("Submit");
@@ -227,7 +227,7 @@ public class Comment extends JFrame {
 				
 			}
 		});
-		btnSubmit.setBounds(358, 671, 88, 29);
+		btnSubmit.setBounds(368, 583, 88, 29);
 		contentPane.add(btnSubmit);
 		
 		JButton btnEdit = new JButton("Cancel");
@@ -240,42 +240,42 @@ public class Comment extends JFrame {
 			}
 		});
 
-		btnEdit.setBounds(264, 671, 88, 29);
+		btnEdit.setBounds(274, 583, 88, 29);
 		contentPane.add(btnEdit);
 		
 		JTextPane txtpnIReallyCant = new JTextPane();
-		txtpnIReallyCant.setText("I really can't agree with you. I think 23 Celcius is so cold. I prefer 25.\n\n\t\t    Edited Nov 1 at 9:12");
-		txtpnIReallyCant.setBounds(133, 405, 319, 72);
+		txtpnIReallyCant.setText("Thanks! That makes sense, as the blanket is warm enough.\n\n\t\t    Edited Nov 1 at 9:12");
+		txtpnIReallyCant.setBounds(132, 335, 319, 72);
 		contentPane.add(txtpnIReallyCant);
 		
 		JSeparator separator_3 = new JSeparator();
-		separator_3.setBounds(16, 525, 694, 12);
+		separator_3.setBounds(12, 445, 694, 12);
 		contentPane.add(separator_3);
 		
 		JSeparator separator_4 = new JSeparator();
 		separator_4.setOrientation(SwingConstants.VERTICAL);
-		separator_4.setBounds(499, 564, 12, 101);
+		separator_4.setBounds(499, 489, 12, 101);
 		contentPane.add(separator_4);
 		
 		JLabel label_6 = new JLabel("");
 		label_6.setIcon(new ImageIcon(Comment.class.getResource("/ubc/cpsc544/Me.png")));
-		label_6.setBounds(590, 575, 88, 103);
+		label_6.setBounds(590, 505, 88, 103);
 		contentPane.add(label_6);
 		
 		JLabel lblMe = new JLabel("Me");
 		lblMe.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
-		lblMe.setBounds(599, 548, 61, 16);
+		lblMe.setBounds(599, 478, 61, 16);
 		contentPane.add(lblMe);
 		
 		JTextPane txtpnRank_1 = new JTextPane();
 		txtpnRank_1.setText("Rank  \n\n95%");
-		txtpnRank_1.setBounds(543, 587, 45, 66);
+		txtpnRank_1.setBounds(543, 517, 45, 66);
 		contentPane.add(txtpnRank_1);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(745, 173, 240, 493);
+		panel_1.setBounds(746, 78, 240, 493);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
