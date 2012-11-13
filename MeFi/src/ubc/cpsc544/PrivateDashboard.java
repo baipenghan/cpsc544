@@ -121,7 +121,7 @@ public class PrivateDashboard {
 		
 		JLabel lblCumulative = new JLabel("Cumulative");
 		lblCumulative.setBounds(10, 5, 89, 26);
-		lblCumulative.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCumulative.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblCumulative.setBorder(null);
 		panel.add(lblCumulative);
 		
@@ -166,6 +166,10 @@ public class PrivateDashboard {
 		label_4.setBorder(null);
 		label_4.setBounds(10, 224, 144, 31);
 		panel.add(label_4);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(10, 133, 152, 2);
+		panel.add(separator);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(null);
@@ -214,30 +218,33 @@ public class PrivateDashboard {
 		lblIdeas.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeas);
 		
-		JLabel lblUnits = new JLabel("Units:");
-		lblUnits.setBounds(795, 76, 61, 16);
-		frame.getContentPane().add(lblUnits);
+		JPanel panel_Units = new JPanel();
+		FlowLayout fl_panel_Units = (FlowLayout) panel_Units.getLayout();
+		fl_panel_Units.setAlignment(FlowLayout.LEFT);
+		panel_Units.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_Units.setBackground(Color.WHITE);
+		panel_Units.setBounds(791, 69, 174, 141);
+		frame.getContentPane().add(panel_Units);
 		
-		JRadioButton rdbtnKilowatt = new JRadioButton("Kilo-Watt Hour kWH");
-		rdbtnKilowatt.setSelected(true);
-		rdbtnKilowatt.setBounds(805, 104, 160, 23);
-		frame.getContentPane().add(rdbtnKilowatt);
+		JLabel label_Units = new JLabel("Units:");
+		label_Units.setFont(new Font("Tahoma", Font.BOLD, 14));
+		panel_Units.add(label_Units);
 		
-		JRadioButton rdbtnIbsOfCo = new JRadioButton("Ibs of CO2");
-		rdbtnIbsOfCo.setBounds(805, 139, 160, 23);
-		frame.getContentPane().add(rdbtnIbsOfCo);
+		JRadioButton radioButton = new JRadioButton("Kilo-Watt Hour kWH");
+		radioButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton.setBackground(Color.WHITE);
+		radioButton.setSelected(true);
+		panel_Units.add(radioButton);
 		
-		JRadioButton rdbtnDollarValue = new JRadioButton("Dollar Value");
-		rdbtnDollarValue.setBounds(805, 174, 160, 23);
-		frame.getContentPane().add(rdbtnDollarValue);
+		JRadioButton radioButton_1 = new JRadioButton("Ibs of CO2");
+		radioButton_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_1.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_1);
 		
-		JTextPane txtpnIdeas = new JTextPane();
-		txtpnIdeas.setEditable(false);
-		txtpnIdeas.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtpnIdeas.setBorder(new LineBorder(new Color(0, 0, 0)));
-		txtpnIdeas.setMargin(new Insets(30, 30, 30, 30));
-		txtpnIdeas.setBounds(789, 69, 208, 157);
-		frame.getContentPane().add(txtpnIdeas);
+		JRadioButton radioButton_2 = new JRadioButton("Dollar Value");
+		radioButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		radioButton_2.setBackground(Color.WHITE);
+		panel_Units.add(radioButton_2);
 	
 		
 	}
