@@ -252,6 +252,7 @@ public class Ideas {
 					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() - 224);
 					label_1.setLocation(label_1.getX(), label_1.getY() - 211);
 					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() - 211);
+					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() - 211);
 				
 					label_6.setLocation(label_6.getX(), label_6.getY() + 224);
 					label.setLocation(label.getX(), label.getY() + 224);
@@ -260,6 +261,7 @@ public class Ideas {
 					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() + 224);
 					label_4.setLocation(label_4.getX(), label_4.getY() + 211);
 					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() + 211);
+					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() + 211);
 				}
 			}
 		});
@@ -298,6 +300,32 @@ public class Ideas {
 		frame.getContentPane().add(btnTopMonthly);
 		
 		JButton btnTopYearly = new JButton("Top Yearly\r\n");
+		btnTopYearly.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(label_5.getY() < 400){
+					label_5.setLocation(label_5.getX(), label_5.getY() + 224);
+					lblNewLabel.setLocation(lblNewLabel.getX(), lblNewLabel.getY() + 224);
+					label_2.setLocation(label_2.getX(), label_2.getY() + 224);
+					lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 224);
+					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 224);
+					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
+					label_1.setLocation(label_1.getX(), label_1.getY() + 211);
+					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() + 211);
+					
+				
+					label_6.setLocation(label_6.getX(), label_6.getY() - 224);
+					label.setLocation(label.getX(), label.getY() - 224);
+					label_3.setLocation(label_3.getX(), label_3.getY() - 224);
+					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 224);
+					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 224);
+					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
+					label_4.setLocation(label_4.getX(), label_4.getY() - 211);
+					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() - 211);
+					
+				}
+			}
+		});
 		btnTopYearly.setBounds(513, 95, 117, 29);
 		frame.getContentPane().add(btnTopYearly);
 		
