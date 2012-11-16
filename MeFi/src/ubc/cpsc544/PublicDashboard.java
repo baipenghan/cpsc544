@@ -157,14 +157,20 @@ public class PublicDashboard {
 		
 		JTextPane txtpnFloors = new JTextPane();
 		txtpnFloors.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		txtpnFloors.setText("Floors:  05\r\nOccupants:  120\r\r\nSt. John\u2019s College is UBC\u2019s international graduate college. A magnet for international and multicultural exchange, the College offers an academic setting that encourages discussion, debate and cultural expression, all enlivened by the participation of resident graduate students who come from diverse cultural backgrounds.");
-		txtpnFloors.setBounds(12, 12, 666, 134);
+		txtpnFloors.setText("St. John\u2019s College is UBC\u2019s international graduate college. A magnet for international and multicultural exchange, the College offers an academic setting that encourages discussion, debate and cultural expression, all enlivened by the participation of resident graduate students who come from diverse cultural backgrounds.");
+		txtpnFloors.setBounds(12, 60, 666, 80);
 		panel_4.add(txtpnFloors);
 		
 		JTextPane txtpnNoFloors = new JTextPane();
 		txtpnNoFloors.setFont(new Font("Helvetica", Font.PLAIN, 15));
 		txtpnNoFloors.setText("NO. FLOORS  \t-  05\nOCCUPANTS  \t-  120\n\nSt. John\u2019s College is UBC\u2019s international graduate college. A magnet for international\n and multicultural exchange, the College offers an academic setting that encourages \ndiscussion, debate and cultural expression, all enlivened by the participation of \nresident graduate students who come from diverse cultural backgrounds.");
 		panel_4.add(txtpnNoFloors);
+		
+		JTextPane txtpnFloorsOccupants = new JTextPane();
+		txtpnFloorsOccupants.setFont(new Font("Dialog", Font.PLAIN, 15));
+		txtpnFloorsOccupants.setText("Floors:  05\r\nOccupants:  120\r");
+		txtpnFloorsOccupants.setBounds(12, 12, 280, 51);
+		panel_4.add(txtpnFloorsOccupants);
 		
 		JPanel panel_5 = new JPanel();
 		panel_5.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -203,7 +209,7 @@ public class PublicDashboard {
 		
 		JLabel lblK = new JLabel("176,000 kWH");
 		lblK.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
-		lblK.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblK.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblK.setBorder(null);
 		lblK.setBounds(10, 32, 144, 31);
 		panel.add(lblK);
@@ -230,7 +236,7 @@ public class PublicDashboard {
 		
 		JLabel lblKwh = new JLabel("166,500 kWH");
 		lblKwh.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
-		lblKwh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblKwh.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblKwh.setBorder(null);
 		lblKwh.setBounds(10, 176, 144, 31);
 		panel.add(lblKwh);
@@ -238,7 +244,7 @@ public class PublicDashboard {
 		JLabel label_4 = new JLabel("5.4%");
 		label_4.setForeground(new Color(0, 204, 0));
 		label_4.setIcon(new ImageIcon(PublicDashboard.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_4.setFont(new Font("Tahoma", Font.BOLD, 15));
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 21));
 		label_4.setBorder(null);
 		label_4.setBounds(10, 224, 144, 31);
 		panel.add(label_4);
@@ -270,6 +276,11 @@ public class PublicDashboard {
 		panel_2.add(lblTopIdeas);
 		lblTopIdeas.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblTopIdeas.setBorder(null);
+		
+		JLabel lblSt = new JLabel("St. John's College, UBC");
+		lblSt.setFont(new Font("Dialog", Font.BOLD, 16));
+		lblSt.setBounds(519, 40, 192, 22);
+		frame.getContentPane().add(lblSt);
 	
 		
 	}

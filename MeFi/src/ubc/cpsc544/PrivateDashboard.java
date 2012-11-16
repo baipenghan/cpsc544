@@ -128,7 +128,7 @@ public class PrivateDashboard {
 		
 		JLabel lblK = new JLabel("5,891 kWH");
 		lblK.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
-		lblK.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblK.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblK.setBorder(null);
 		lblK.setBounds(10, 32, 144, 31);
 		panel.add(lblK);
@@ -155,7 +155,7 @@ public class PrivateDashboard {
 		
 		JLabel lblKwh = new JLabel("5,572 kWH");
 		lblKwh.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Electricity.jpg")));
-		lblKwh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblKwh.setFont(new Font("Tahoma", Font.BOLD, 17));
 		lblKwh.setBorder(null);
 		lblKwh.setBounds(10, 176, 144, 31);
 		panel.add(lblKwh);
@@ -163,7 +163,7 @@ public class PrivateDashboard {
 		JLabel label_4 = new JLabel("5.4%");
 		label_4.setForeground(new Color(0, 204, 0));
 		label_4.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/DownArrow.png")));
-		label_4.setFont(new Font("Tahoma", Font.BOLD, 15));
+		label_4.setFont(new Font("Tahoma", Font.BOLD, 21));
 		label_4.setBorder(null);
 		label_4.setBounds(10, 224, 144, 31);
 		panel.add(label_4);
