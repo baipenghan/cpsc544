@@ -51,6 +51,7 @@ public class LineChartComparison {
 		final String series1 = "Me";
 		final String series2 = "Jenny";
 		final String series3 = "Ken";
+		final String series4 = "Me (last year)";
 
 		// column keys...
 		final String type1 = "Jan";
@@ -70,7 +71,8 @@ public class LineChartComparison {
 		final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
 		final double[][] data = new double[][] { { 330.0, 430.0, 350.0, 880.0, 540.0, 100.0, 430.0, 350.0, 680.0, 540.0, 100.0, 430.0 },
-				{ 100.0, 630.0, 350.0, 980.0, 540.0, 100.0, 430.0, 350.0, 680.0, 410.0, 330.0, 430.0 }, { 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0 } };
+				{ 100.0, 630.0, 350.0, 980.0, 540.0, 100.0, 430.0, 350.0, 680.0, 410.0, 330.0, 430.0 }, { 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0, 220.0, 340.0, 620.0, 410.0, 330.0 },
+				{ 340.0, 620.0, 410.0, 330.0, 220.0, 540.0, 100.0, 430.0, 350.0, 680.0, 540.0, 100.0}};
 
 		dataset.addValue(data[0][0], series1, type1);
 		dataset.addValue(data[0][1], series1, type2);
@@ -112,6 +114,20 @@ public class LineChartComparison {
 			dataset.addValue(data[2][9], series3, type10);
 			dataset.addValue(data[2][10], series3, type11);
 			dataset.addValue(data[2][11], series3, type12);
+		}
+		if (names.contains("Me (last year)")) {
+			dataset.addValue(data[3][0], series4, type1);
+			dataset.addValue(data[3][1], series4, type2);
+			dataset.addValue(data[3][2], series4, type3);
+			dataset.addValue(data[3][3], series4, type4);
+			dataset.addValue(data[3][4], series4, type5);
+			dataset.addValue(data[3][5], series4, type6);
+			dataset.addValue(data[3][6], series4, type7);
+			dataset.addValue(data[3][7], series4, type8);
+			dataset.addValue(data[3][8], series4, type9);
+			dataset.addValue(data[3][9], series4, type10);
+			dataset.addValue(data[3][10], series4, type11);
+			dataset.addValue(data[3][11], series4, type12);
 		}
 		return dataset;
 

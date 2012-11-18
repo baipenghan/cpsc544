@@ -103,20 +103,20 @@ public class Comparison {
 
 		JComboBox comboBox = new JComboBox();
 		comboBox.setEnabled(false);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Apartments", "301", "302", "305"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Apartments", "301", "302", "305" }));
 		comboBox.setToolTipText("");
 		comboBox.setBounds(12, 219, 172, 27);
 		frame.getContentPane().add(comboBox);
 
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setEnabled(false);
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Floors", "2", "3", "4"}));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] { "Floors", "2", "3", "4" }));
 		comboBox_1.setBounds(12, 258, 172, 27);
 		frame.getContentPane().add(comboBox_1);
 
 		JComboBox comboBox_2 = new JComboBox();
 		comboBox_2.setEnabled(false);
-		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"Buildings", "St. John's"}));
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] { "Buildings", "St. John's" }));
 		comboBox_2.setBounds(12, 297, 172, 27);
 		frame.getContentPane().add(comboBox_2);
 
@@ -211,6 +211,7 @@ public class Comparison {
 
 		ArrayList<String> names = new ArrayList<String>();
 		names.add("Me");
+		names.add("Me (last year)");
 		LineChartComparison lineChart = new LineChartComparison(names);
 		ChartPanel chartPanel = lineChart.getChartPanel();
 		chartPanel.setVisible(true);
@@ -246,10 +247,11 @@ public class Comparison {
 
 		final JCheckBox chckbxJenny = new JCheckBox("");
 		final JCheckBox chckbxKen = new JCheckBox("");
+		final JCheckBox chckbxCompareWithLast = new JCheckBox("Compare with last year");
 
 		chckbxJenny.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
-				updateLineChart(label_applianceList, lblApplianceChart, panel_MainChartPanel, chckbxJenny, chckbxKen);
+				updateLineChart(label_applianceList, lblApplianceChart, panel_MainChartPanel, chckbxJenny, chckbxKen,chckbxCompareWithLast);
 
 			}
 		});
@@ -259,7 +261,7 @@ public class Comparison {
 
 		chckbxKen.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
-				updateLineChart(label_applianceList, lblApplianceChart, panel_MainChartPanel, chckbxJenny, chckbxKen);
+				updateLineChart(label_applianceList, lblApplianceChart, panel_MainChartPanel, chckbxJenny, chckbxKen,chckbxCompareWithLast);
 			}
 		});
 		chckbxKen.setBackground(Color.WHITE);
@@ -294,6 +296,16 @@ public class Comparison {
 		list.setBounds(830, 647, 99, -178);
 		frame.getContentPane().add(list);
 
+		chckbxCompareWithLast.addChangeListener(new ChangeListener() {
+			public void stateChanged(ChangeEvent e) {
+				updateLineChart(label_applianceList, lblApplianceChart, panel_MainChartPanel, chckbxJenny, chckbxKen,chckbxCompareWithLast);
+			}
+		});
+		chckbxCompareWithLast.setSelected(true);
+		chckbxCompareWithLast.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		chckbxCompareWithLast.setBounds(789, 641, 176, 23);
+		frame.getContentPane().add(chckbxCompareWithLast);
+
 	}
 
 	public JFrame getFrame() {
@@ -304,18 +316,23 @@ public class Comparison {
 		this.frame = frame;
 	}
 
-	private void updateLineChart(final JLabel label_applianceList, final JLabel lblApplianceChart, final JPanel panel_MainChartPanel, final JCheckBox chckbxJenny, final JCheckBox chckbxKen) {
+	private void updateLineChart(final JLabel label_applianceList, final JLabel lblApplianceChart, final JPanel panel_MainChartPanel, final JCheckBox chckbxJenny, final JCheckBox chckbxKen, JCheckBox chckbxCompareWithLast) {
 		boolean jennySelected = chckbxJenny.isSelected();
 		boolean kenSelected = chckbxKen.isSelected();
+		boolean lastYearSelected = chckbxCompareWithLast.isSelected();
+		
 
 		int count = 1;
-		List<String> names= new ArrayList<String>();
+		List<String> names = new ArrayList<String>();
 		names.add("Me");
+		if(lastYearSelected) {
+			names.add("Me (last year)");			
+		}
 		if (jennySelected) {
 			count++;
 			names.add("Jenny");
 		}
-		if (kenSelected){
+		if (kenSelected) {
 			names.add("Ken");
 			count++;
 		}
