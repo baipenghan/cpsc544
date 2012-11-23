@@ -227,8 +227,6 @@ public class PrivateDashboard {
 		lblIdeas.setBounds(619, 14, 133, 29);
 		frame.getContentPane().add(lblIdeas);
 		
-		final JLabel label_chart = new JLabel("");
-		
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT);
 		tabbedPane.setBorder(null);
 		tabbedPane.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -241,9 +239,36 @@ public class PrivateDashboard {
 		panel_apartment.setLayout(null);
 		tabbedPane.addTab("Apartment", null, panel_apartment, null);
 		
+		final JLabel lblLightChart = new JLabel("");
+		lblLightChart.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Light_1.png")));
+		lblLightChart.setBounds(238, 97, 260, 173);
+		lblLightChart.setVisible(false);
+		panel_apartment.add(lblLightChart);
+		
+		
+		final JLabel lblTrans1 = new JLabel("");
+		lblTrans1.setBounds(339, 293, 35, 31);
+		panel_apartment.add(lblTrans1);
+		
+		final JLabel lblTrans2 = new JLabel("");
+		lblTrans2.setBounds(204, 249, 30, 28);
+		panel_apartment.add(lblTrans2);
+		
+		final JLabel lblLightChart_2 = new JLabel("");
+		lblLightChart_2.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/Light_2.png")));
+		lblLightChart_2.setBounds(108, 63, 266, 167);
+		lblLightChart_2.setVisible(false);
+		panel_apartment.add(lblLightChart_2);
+//		lblNewLabel_2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		
+		
+		
+		final JLabel label_chart = new JLabel("");
+		
 		label_chart.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/3D-Apartment-view-without-nodes.png")));
 		label_chart.setBounds(0, 0, 499, 401);
 		panel_apartment.add(label_chart);
+		
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(PrivateDashboard.class.getResource("/ubc/cpsc544/month-strip.png")));
@@ -355,6 +380,40 @@ public class PrivateDashboard {
 			chckbxPlugLoad.setBackground(Color.WHITE);
 			chckbxPlugLoad.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		
+			lblTrans1.addMouseListener(new MouseAdapter() {
+
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					if(chckbxLights.isSelected()){
+						lblTrans1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+						lblLightChart.setVisible(true);	
+					}
+				}
+				@Override
+				public void mouseExited(MouseEvent e) {
+					lblLightChart.setVisible(false);
+				}
+			});
+			
+			lblTrans2.addMouseListener(new MouseAdapter() {
+
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					if(chckbxLights.isSelected()){
+						lblTrans2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+						lblLightChart_2.setVisible(true);	
+					}
+				}
+				@Override
+				public void mouseExited(MouseEvent e) {
+					lblLightChart_2.setVisible(false);
+				}
+			});
+
+			
+			
+			
+			
 		JPanel panel_floor = new JPanel();
 		panel_floor.setBorder(null);
 		tabbedPane.addTab("Floor", null, panel_floor, null);
