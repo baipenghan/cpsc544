@@ -169,7 +169,7 @@ public class Comment extends JFrame {
 		
 		JSeparator separator = new JSeparator();
 		separator.setOrientation(SwingConstants.VERTICAL);
-		separator.setBounds(499, 84, 12, 135);
+		separator.setBounds(499, 111, 12, 135);
 		contentPane.add(separator);
 		
 		final JLabel label_4 = new JLabel("");
@@ -194,11 +194,6 @@ public class Comment extends JFrame {
 		label_5.setBounds(617, 113, 61, 16);
 		contentPane.add(label_5);
 		
-		JTextPane textPane_1 = new JTextPane();
-		textPane_1.setText("Rank  \n\n90%");
-		textPane_1.setBounds(542, 147, 45, 66);
-		contentPane.add(textPane_1);
-		
 		JLabel lblComments = new JLabel("Comments");
 		lblComments.setFont(new Font("Lucida Grande", Font.BOLD, 16));
 		lblComments.setBounds(68, 246, 343, 27);
@@ -222,11 +217,6 @@ public class Comment extends JFrame {
 		lblBilly.setFont(new Font("Apple Chancery", Font.BOLD | Font.ITALIC, 15));
 		lblBilly.setBounds(599, 307, 61, 16);
 		contentPane.add(lblBilly);
-		
-		JTextPane txtpnRank = new JTextPane();
-		txtpnRank.setText("Rank  \n\n40%");
-		txtpnRank.setBounds(542, 337, 45, 66);
-		contentPane.add(txtpnRank);
 		
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.addMouseListener(new MouseAdapter() {
@@ -280,11 +270,6 @@ public class Comment extends JFrame {
 		lblMe.setBounds(599, 478, 61, 16);
 		contentPane.add(lblMe);
 		
-		JTextPane txtpnRank_1 = new JTextPane();
-		txtpnRank_1.setText("Rank  \n\n95%");
-		txtpnRank_1.setBounds(543, 517, 45, 66);
-		contentPane.add(txtpnRank_1);
-		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setBackground(Color.WHITE);
@@ -310,17 +295,17 @@ public class Comment extends JFrame {
 		
 		JLabel label_15 = new JLabel("");
 		label_15.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Turtle.png")));
-		label_15.setBounds(129, 202, 63, 61);
+		label_15.setBounds(129, 236, 63, 61);
 		panel_1.add(label_15);
 		
 		JLabel label_16 = new JLabel("");
 		label_16.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Me.png")));
-		label_16.setBounds(20, 202, 63, 61);
+		label_16.setBounds(20, 236, 63, 61);
 		panel_1.add(label_16);
 		
 		JLabel lblPatrick_1 = new JLabel(" Patrick");
 		lblPatrick_1.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
-		lblPatrick_1.setBounds(10, 123, 81, 19);
+		lblPatrick_1.setBounds(20, 124, 81, 19);
 		panel_1.add(lblPatrick_1);
 		
 		JLabel lblTom = new JLabel("Tom");
@@ -330,28 +315,89 @@ public class Comment extends JFrame {
 		
 		JLabel lblJennifer = new JLabel("Jennifer");
 		lblJennifer.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
-		lblJennifer.setBounds(30, 274, 61, 16);
+		lblJennifer.setBounds(30, 308, 61, 16);
 		panel_1.add(lblJennifer);
 		
 		JLabel lblSam = new JLabel("Katherine");
 		lblSam.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
-		lblSam.setBounds(139, 274, 79, 16);
+		lblSam.setBounds(139, 308, 79, 16);
 		panel_1.add(lblSam);
 		
-		JLabel label_17 = new JLabel("90%");
-		label_17.setBounds(20, 145, 46, 14);
-		panel_1.add(label_17);
+		JTextPane textPane_7 = new JTextPane();
+		textPane_7.setText("28");
+		textPane_7.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_7.setBounds(33, 147, 37, 27);
+		panel_1.add(textPane_7);
 		
-		JLabel label_18 = new JLabel("85%");
-		label_18.setBounds(146, 145, 46, 14);
-		panel_1.add(label_18);
+		JTextPane textPane_8 = new JTextPane();
+		textPane_8.setText("Points\n");
+		textPane_8.setBounds(27, 174, 56, 16);
+		panel_1.add(textPane_8);
 		
-		JLabel label_19 = new JLabel("60%");
-		label_19.setBounds(40, 301, 46, 14);
-		panel_1.add(label_19);
+		JTextPane textPane_9 = new JTextPane();
+		textPane_9.setText("17");
+		textPane_9.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_9.setBounds(142, 147, 37, 27);
+		panel_1.add(textPane_9);
 		
-		JLabel label_20 = new JLabel("75%");
-		label_20.setBounds(146, 301, 46, 14);
-		panel_1.add(label_20);
+		JTextPane textPane_10 = new JTextPane();
+		textPane_10.setText("Points\n");
+		textPane_10.setBounds(136, 174, 56, 16);
+		panel_1.add(textPane_10);
+		
+		JTextPane textPane_11 = new JTextPane();
+		textPane_11.setText("32");
+		textPane_11.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_11.setBounds(33, 336, 37, 27);
+		panel_1.add(textPane_11);
+		
+		JTextPane textPane_12 = new JTextPane();
+		textPane_12.setText("Points\n");
+		textPane_12.setBounds(27, 363, 56, 16);
+		panel_1.add(textPane_12);
+		
+		JTextPane textPane_13 = new JTextPane();
+		textPane_13.setText("13");
+		textPane_13.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_13.setBounds(145, 336, 37, 27);
+		panel_1.add(textPane_13);
+		
+		JTextPane textPane_14 = new JTextPane();
+		textPane_14.setText("Points\n");
+		textPane_14.setBounds(139, 363, 56, 16);
+		panel_1.add(textPane_14);
+		
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setText("28");
+		textPane_2.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_2.setBounds(542, 166, 37, 27);
+		contentPane.add(textPane_2);
+		
+		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setText("Points\n");
+		textPane_3.setBounds(537, 196, 56, 16);
+		contentPane.add(textPane_3);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setText("65");
+		textPane_1.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_1.setBounds(542, 361, 37, 27);
+		contentPane.add(textPane_1);
+		
+		JTextPane textPane_4 = new JTextPane();
+		textPane_4.setText("Points\n");
+		textPane_4.setBounds(537, 391, 56, 16);
+		contentPane.add(textPane_4);
+		
+		JTextPane textPane_5 = new JTextPane();
+		textPane_5.setText("98");
+		textPane_5.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_5.setBounds(542, 517, 37, 27);
+		contentPane.add(textPane_5);
+		
+		JTextPane textPane_6 = new JTextPane();
+		textPane_6.setText("Points\n");
+		textPane_6.setBounds(537, 547, 56, 16);
+		contentPane.add(textPane_6);
 	}
 }

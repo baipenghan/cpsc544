@@ -221,8 +221,9 @@ public class Ideas {
 		frame.getContentPane().add(lblPatrick);
 		
 		final JTextPane txtpnRank = new JTextPane();
-		txtpnRank.setText("Rank  \n\n90%");
-		txtpnRank.setBounds(554, 273, 45, 66);
+		txtpnRank.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		txtpnRank.setText("28");
+		txtpnRank.setBounds(559, 271, 37, 27);
 		frame.getContentPane().add(txtpnRank);
 		
 		final JLabel label_4 = new JLabel("");
@@ -235,10 +236,24 @@ public class Ideas {
 		lblKatherine.setBounds(618, 421, 81, 16);
 		frame.getContentPane().add(lblKatherine);
 		
-		final JTextPane txtpnRank_1 = new JTextPane();
-		txtpnRank_1.setText("Rank  \n\n75%");
-		txtpnRank_1.setBounds(554, 485, 45, 66);
-		frame.getContentPane().add(txtpnRank_1);
+		final JTextPane textPane = new JTextPane();
+		textPane.setText("13");
+		textPane.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane.setBounds(559, 482, 37, 27);
+		frame.getContentPane().add(textPane);
+		
+		final JTextPane txtpnPoints = new JTextPane();
+		txtpnPoints.setText("Points\n");
+		txtpnPoints.setBounds(554, 301, 56, 16);
+		frame.getContentPane().add(txtpnPoints);
+		
+		
+		
+		final JTextPane txtpnPoints_1 = new JTextPane();
+		txtpnPoints_1.setText("Points");
+		txtpnPoints_1.setBounds(554, 513, 50, 16);
+		frame.getContentPane().add(txtpnPoints_1);
+		
 		
 		JButton btnNewest = new JButton("Newest");
 		btnNewest.addMouseListener(new MouseAdapter() {
@@ -253,6 +268,7 @@ public class Ideas {
 					label_1.setLocation(label_1.getX(), label_1.getY() - 211);
 					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() - 211);
 					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() - 211);
+					txtpnPoints.setLocation(txtpnPoints.getX(), txtpnPoints.getY() - 211);
 				
 					label_6.setLocation(label_6.getX(), label_6.getY() + 224);
 					label.setLocation(label.getX(), label.getY() + 224);
@@ -260,8 +276,9 @@ public class Ideas {
 					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() + 224);
 					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() + 224);
 					label_4.setLocation(label_4.getX(), label_4.getY() + 211);
-					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() + 211);
+					textPane.setLocation(textPane.getX(), textPane.getY() + 211);
 					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() + 211);
+					txtpnPoints_1.setLocation(txtpnPoints_1.getX(), txtpnPoints_1.getY() + 211);
 				}
 			}
 		});
@@ -278,9 +295,10 @@ public class Ideas {
 					label_2.setLocation(label_2.getX(), label_2.getY() + 224);
 					lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 224);
 					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 224);
-					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
 					label_1.setLocation(label_1.getX(), label_1.getY() + 211);
 					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() + 211);
+					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
+					txtpnPoints.setLocation(txtpnPoints.getX(), txtpnPoints.getY() + 211);
 					
 				
 					label_6.setLocation(label_6.getX(), label_6.getY() - 224);
@@ -288,9 +306,10 @@ public class Ideas {
 					label_3.setLocation(label_3.getX(), label_3.getY() - 224);
 					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 224);
 					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 224);
-					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
 					label_4.setLocation(label_4.getX(), label_4.getY() - 211);
-					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() - 211);
+					textPane.setLocation(textPane.getX(), textPane.getY() - 211);
+					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
+					txtpnPoints_1.setLocation(txtpnPoints_1.getX(), txtpnPoints_1.getY() - 211);
 					
 				}
 				
@@ -309,9 +328,10 @@ public class Ideas {
 					label_2.setLocation(label_2.getX(), label_2.getY() + 224);
 					lblNewLabel_1.setLocation(lblNewLabel_1.getX(), lblNewLabel_1.getY() + 224);
 					txtpnIThinkThe.setLocation(txtpnIThinkThe.getX(), txtpnIThinkThe.getY() + 224);
-					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
 					label_1.setLocation(label_1.getX(), label_1.getY() + 211);
 					txtpnRank.setLocation(txtpnRank.getX(), txtpnRank.getY() + 211);
+					lblPatrick.setLocation(lblPatrick.getX(), lblPatrick.getY() + 211);
+					txtpnPoints.setLocation(txtpnPoints.getX(), txtpnPoints.getY() + 211);
 					
 				
 					label_6.setLocation(label_6.getX(), label_6.getY() - 224);
@@ -319,9 +339,10 @@ public class Ideas {
 					label_3.setLocation(label_3.getX(), label_3.getY() - 224);
 					txtpnWeShouldLeave.setLocation(txtpnWeShouldLeave.getX(), txtpnWeShouldLeave.getY() - 224);
 					lblSuggestionForEnegy.setLocation(lblSuggestionForEnegy.getX(), lblSuggestionForEnegy.getY() - 224);
-					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
 					label_4.setLocation(label_4.getX(), label_4.getY() - 211);
-					txtpnRank_1.setLocation(txtpnRank_1.getX(), txtpnRank_1.getY() - 211);
+					textPane.setLocation(textPane.getX(), textPane.getY() - 211);
+					lblKatherine.setLocation(lblKatherine.getX(), lblKatherine.getY() - 211);
+					txtpnPoints_1.setLocation(txtpnPoints_1.getX(), txtpnPoints_1.getY() - 211);
 					
 				}
 			}
@@ -423,12 +444,12 @@ public class Ideas {
 		
 		JLabel label_15 = new JLabel("");
 		label_15.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Turtle.png")));
-		label_15.setBounds(129, 202, 63, 61);
+		label_15.setBounds(129, 236, 63, 61);
 		panel_1.add(label_15);
 		
 		JLabel label_16 = new JLabel("");
 		label_16.setIcon(new ImageIcon(Ideas.class.getResource("/ubc/cpsc544/Me.png")));
-		label_16.setBounds(20, 202, 63, 61);
+		label_16.setBounds(20, 236, 63, 61);
 		panel_1.add(label_16);
 		
 		JLabel lblPatrick_1 = new JLabel(" Patrick");
@@ -443,29 +464,57 @@ public class Ideas {
 		
 		JLabel lblJennifer = new JLabel("Jennifer");
 		lblJennifer.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
-		lblJennifer.setBounds(30, 274, 61, 16);
+		lblJennifer.setBounds(30, 308, 61, 16);
 		panel_1.add(lblJennifer);
 		
 		JLabel lblSam = new JLabel("Katherine");
 		lblSam.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 15));
-		lblSam.setBounds(139, 274, 79, 16);
+		lblSam.setBounds(139, 308, 79, 16);
 		panel_1.add(lblSam);
 		
-		JLabel label_17 = new JLabel("90%");
-		label_17.setBounds(20, 145, 46, 14);
-		panel_1.add(label_17);
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setText("28");
+		textPane_1.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_1.setBounds(27, 150, 37, 27);
+		panel_1.add(textPane_1);
 		
-		JLabel label_18 = new JLabel("85%");
-		label_18.setBounds(146, 145, 46, 14);
-		panel_1.add(label_18);
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setText("Points\n");
+		textPane_2.setBounds(21, 177, 56, 16);
+		panel_1.add(textPane_2);
 		
-		JLabel label_19 = new JLabel("60%");
-		label_19.setBounds(40, 301, 46, 14);
-		panel_1.add(label_19);
+		JTextPane textPane_3 = new JTextPane();
+		textPane_3.setText("13");
+		textPane_3.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_3.setBounds(156, 331, 37, 27);
+		panel_1.add(textPane_3);
 		
-		JLabel label_20 = new JLabel("75%");
-		label_20.setBounds(146, 301, 46, 14);
-		panel_1.add(label_20);
+		JTextPane textPane_4 = new JTextPane();
+		textPane_4.setText("Points");
+		textPane_4.setBounds(151, 362, 50, 16);
+		panel_1.add(textPane_4);
+		
+		JTextPane textPane_5 = new JTextPane();
+		textPane_5.setText("17");
+		textPane_5.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_5.setBounds(140, 147, 37, 27);
+		panel_1.add(textPane_5);
+		
+		JTextPane textPane_6 = new JTextPane();
+		textPane_6.setText("Points");
+		textPane_6.setBounds(135, 178, 50, 16);
+		panel_1.add(textPane_6);
+		
+		JTextPane textPane_7 = new JTextPane();
+		textPane_7.setText("32");
+		textPane_7.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		textPane_7.setBounds(34, 330, 37, 27);
+		panel_1.add(textPane_7);
+		
+		JTextPane textPane_8 = new JTextPane();
+		textPane_8.setText("Points");
+		textPane_8.setBounds(29, 361, 50, 16);
+		panel_1.add(textPane_8);
 		
 		JLabel label_8 = new JLabel("");
 		label_8.setBounds(612, 291, 103, 101);
@@ -487,6 +536,7 @@ public class Ideas {
 		txtSearch.setBounds(870, 14, 115, 29);
 		frame.getContentPane().add(txtSearch);
 		txtSearch.setColumns(10);
+		
 		
 		
 	}
